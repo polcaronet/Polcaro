@@ -75,13 +75,13 @@ module.exports = async (req, res) => {
     } else if (redirectedToProfile) {
       // Se redirecionou pro perfil, não está ao vivo
       isLive = false;
-    } else if (hasStatus2 && hasRoomId) {
-      // Status 2 + room_id = definitivamente ao vivo
+    } else if (hasStatus2) {
+      // Status 2 = ao vivo (indicador mais confiável)
       isLive = true;
     } else if (explicitlyLive) {
       isLive = true;
-    } else if (hasStreamUrl && hasRoomId) {
-      // Tem stream URL ativa + room_id
+    } else if (hasStreamUrl) {
+      // Tem stream URL ativa
       isLive = true;
     } else {
       isLive = false;
