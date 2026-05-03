@@ -20,8 +20,8 @@
   align-items: center;
   overflow: hidden;
   background-image: url('/assets/capa.png');
-  background-size: contain;
-  background-position: right top;
+  background-size: 50% auto;
+  background-position: right center;
   background-repeat: no-repeat;
 
   &::before {
@@ -81,7 +81,7 @@
     padding: 80px 24px;
     position: relative;
     z-index: 1;
-    max-width: 600px;
+    max-width: 55%;
     flex: 1;
   }
 
@@ -648,6 +648,10 @@
 @media (max-width: 900px) {
   .hero {
     background-image: none;
+
+    .hero__content {
+      max-width: 100%;
+    }
   }
 
   .hero__layout {
@@ -730,6 +734,17 @@
 }
 
 /* ── Capa hero — temas ──────────────────────────── */
+
+@media (max-width: 1200px) {
+  .hero {
+    background-size: 45% auto;
+  }
+
+  .hero__content {
+    max-width: 58%;
+  }
+}
+
 :host-context([data-theme="blue"]) .hero::before {
   background: linear-gradient(to right,
       var(--bg-primary) 45%,
