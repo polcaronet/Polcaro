@@ -26,10 +26,10 @@ import { Component } from '@angular/core';
               <span class="gold-name">Anselmo Polcaro</span>
             </div>
             <p class="footer-tagline">
-              <strong>Anselmo</strong> <strong>Polcaro</strong>, brasileiro, apaixonado por desenvolvimento de
+              <strong>Anselmo Polcaro</strong>, brasileiro, apaixonado por desenvolvimento de
               <strong>Apps</strong> em <strong>Flutter</strong> com <strong>Dart.</strong>
               <span class="footer-bio-extra" [class.footer-bio-extra--visible]="bioOpen">
-                Atualmente focado em Aplicativos <strong>Mobile</strong> <strong>E-Commerce</strong> e em geral.
+                Atualmente focado em Aplicativos <strong>Mobile</strong> e <strong>E-Commerce</strong> em geral.
                 Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂
               </span>
             </p>
