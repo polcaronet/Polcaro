@@ -261,22 +261,19 @@
   align-items: center;
 }
 
-.lang-selector__current {
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
+.lang-selector__flag {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: var(--bg-secondary);
+  object-fit: cover;
+  display: block;
   border: 1.5px solid var(--border);
   transition: var(--transition);
+}
 
-  &:hover {
-    border-color: var(--border-accent);
-    transform: scale(1.1);
-  }
+.lang-selector:hover .lang-selector__flag {
+  border-color: var(--border-accent);
+  transform: scale(1.1);
 }
 
 .lang-dropdown {
@@ -331,7 +328,11 @@
   }
 
   &__flag {
-    font-size: 1.1rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   &__label {

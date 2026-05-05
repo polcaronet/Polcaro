@@ -6,17 +6,17 @@ export type Lang = 'pt' | 'en' | 'es' | 'fr' | 'ar';
 export interface LangOption {
   code: Lang;
   label: string;
-  flag: string;
+  flag: string; // URL da imagem da bandeira
 }
 
 @Injectable({ providedIn: 'root' })
 export class TranslateService {
   readonly languages: LangOption[] = [
-    { code: 'pt', label: 'Português', flag: '🇧🇷' },
-    { code: 'en', label: 'English', flag: '🇺🇸' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'fr', label: 'Français', flag: '🇫🇷' },
-    { code: 'ar', label: 'العربية', flag: '🇸🇦' },
+    { code: 'pt', label: 'Português', flag: 'https://flagcdn.com/w40/br.png' },
+    { code: 'en', label: 'English', flag: 'https://flagcdn.com/w40/us.png' },
+    { code: 'es', label: 'Español', flag: 'https://flagcdn.com/w40/es.png' },
+    { code: 'fr', label: 'Français', flag: 'https://flagcdn.com/w40/fr.png' },
+    { code: 'ar', label: 'العربية', flag: 'https://flagcdn.com/w40/sa.png' },
   ];
 
   private currentLang = new BehaviorSubject<Lang>(this.getInitialLang());

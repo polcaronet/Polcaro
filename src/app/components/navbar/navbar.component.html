@@ -29,11 +29,11 @@
     <div class="navbar__actions">
       <!-- Language selector -->
       <div class="lang-selector" (click)="toggleLang()">
-        <span class="lang-selector__current">{{ getCurrentFlag() }}</span>
+        <img class="lang-selector__flag" [src]="getCurrentFlag()" alt="Language" />
         <div class="lang-dropdown" [class.lang-dropdown--open]="langOpen">
           <button *ngFor="let l of languages" class="lang-option" [class.lang-option--active]="l.code === currentLang"
             (click)="setLang(l.code); $event.stopPropagation()">
-            <span class="lang-option__flag">{{ l.flag }}</span>
+            <img class="lang-option__flag" [src]="l.flag" [alt]="l.label" />
             <span class="lang-option__label">{{ l.label }}</span>
           </button>
         </div>
