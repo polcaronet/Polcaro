@@ -20,7 +20,7 @@
   align-items: center;
   overflow: hidden;
   background-image: url('/assets/capa.png');
-  background-size: 50% auto;
+  background-size: contain;
   background-position: right center;
   background-repeat: no-repeat;
 
@@ -29,10 +29,8 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-        var(--bg-primary) 40%,
-        rgba(244, 243, 255, 0.8) 60%,
-        rgba(244, 243, 255, 0.4) 75%,
-        rgba(244, 243, 255, 0.2));
+        var(--bg-primary) 45%,
+        rgba(244, 243, 255, 0.4) 100%);
     z-index: 0;
     pointer-events: none;
   }
@@ -736,10 +734,6 @@
 /* ── Capa hero — temas ──────────────────────────── */
 
 @media (max-width: 1200px) {
-  .hero {
-    background-size: 45% auto;
-  }
-
   .hero__content {
     max-width: 58%;
   }
@@ -748,17 +742,13 @@
 :host-context([data-theme="blue"]) .hero::before {
   background: linear-gradient(to right,
       var(--bg-primary) 45%,
-      rgba(12, 25, 41, 0.85) 65%,
-      rgba(12, 25, 41, 0.5) 80%,
-      rgba(12, 25, 41, 0.3));
+      rgba(12, 25, 41, 0.5) 100%);
 }
 
 :host-context([data-theme="dark"]) .hero::before {
   background: linear-gradient(to right,
       var(--bg-primary) 45%,
-      rgba(10, 10, 10, 0.85) 65%,
-      rgba(10, 10, 10, 0.5) 80%,
-      rgba(10, 10, 10, 0.3));
+      rgba(10, 10, 10, 0.5) 100%);
 }
 
 /* ── Celulares pequenos ────────────────────────── */
