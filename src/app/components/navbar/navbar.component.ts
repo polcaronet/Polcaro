@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { DataService } from '../../services/data.service';
+import { TranslateService, Lang, LangOption } from '../../services/translate.service';
 import { NavLink } from '../../models/portfolio.models';
 
 @Component({
@@ -14,11 +15,25 @@ export class NavbarComponent implements OnInit {
   scrolled = false;
   mobileOpen = false;
   currentTheme = 'light';
+  langOpen = false;
+  languages: LangOption[] = [];
+  currentLang: Lang = 'pt';
 
-  constructor(private data: DataService, private router: Router) { }
+  constructor(
+    private data: DataService,
+    private router: Router,
+    public translate: TranslateService,
+  ) { }
 
   ngOnInit(): void {
     this.navLinks = this.data.navLinks;
+    this.languages = this.translate.languages;
+    this.currentLang = this.translate.lang;
+
+    this.translate.lang$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+
     this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe(() => { this.mobileOpen = false; });
@@ -29,6 +44,19 @@ export class NavbarComponent implements OnInit {
       this.currentTheme = saved;
       document.documentElement.setAttribute('data-theme', saved);
     }
+  }
+
+  setLang(lang: Lang): void {
+    this.translate.setLang(lang);
+    this.langOpen = false;
+  }
+
+  toggleLang(): void {
+    this.langOpen = !this.langOpen;
+  }
+
+  getCurrentFlag(): string {
+    return this.languages.find(l => l.code === this.currentLang)?.flag || '🇧🇷';
   }
 
   setTheme(theme: string): void {

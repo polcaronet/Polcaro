@@ -14,10 +14,11 @@ import { ContatoComponent } from './pages/contato/contato.component';
 import { PrivacidadeComponent } from './pages/privacidade/privacidade.component';
 import { TermosComponent } from './pages/termos/termos.component';
 import { SafeUrlPipe } from './services/safe-url.pipe';
+import { TranslatePipe } from './services/translate.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent, NavbarComponent, SafeUrlPipe,
+    AppComponent, NavbarComponent, SafeUrlPipe, TranslatePipe,
     TiktokEmbedComponent,
     HomeComponent, ProjetosComponent, LivesComponent,
     ConteudoComponent, SobreComponent, ContatoComponent,
