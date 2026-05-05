@@ -7,8 +7,8 @@
 
         <!-- Esquerda — Título e descrição -->
         <div class="contato-intro">
-          <p class="section-eyebrow">Contato</p>
-          <h1 class="section-title">Vamos<br>conversar?</h1>
+          <p class="section-eyebrow">{{ 'Contato' | translate }}</p>
+          <h1 class="section-title">{{ 'Vamos' | translate }}<br>{{ 'conversar?' | translate }}</h1>
           <p class="contato-desc">
             Tem um projeto em mente? Me conta! Desenvolvo apps mobile e sites profissionais com qualidade e prazo.
           </p>
@@ -37,12 +37,12 @@
           </div>
 
           <form class="contact-form" *ngIf="!sent" [formGroup]="form" (ngSubmit)="submit()">
-            <h2 class="form-title">Enviar mensagem</h2>
+            <h2 class="form-title">{{ 'Enviar mensagem' | translate }}</h2>
             <p class="form-subtitle">Preencha e eu entro em contato em até 24h 🚀</p>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Nome</label>
+                <label for="name">{{ 'Nome' | translate }}</label>
                 <input id="name" type="text" placeholder="Seu nome" formControlName="name"
                   [class.error]="isInvalid('name')" />
                 <span class="err-msg" *ngIf="isInvalid('name')">Nome obrigatório</span>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="form-group">
-              <label>Tipo de projeto</label>
+              <label>{{ 'Tipo de projeto' | translate }}</label>
               <div class="project-types">
                 <button type="button" class="type-btn" [class.type-btn--active]="selectedType === 'app'"
                   (click)="selectType('app')">
@@ -70,14 +70,14 @@
             </div>
 
             <div class="form-group">
-              <label for="subject">Assunto</label>
+              <label for="subject">{{ 'Assunto' | translate }}</label>
               <input id="subject" type="text" placeholder="Descreva brevemente seu projeto" formControlName="subject"
                 [class.error]="isInvalid('subject')" />
               <span class="err-msg" *ngIf="isInvalid('subject')">Assunto obrigatório</span>
             </div>
 
             <div class="form-group">
-              <label for="message">Mensagem</label>
+              <label for="message">{{ 'Mensagem' | translate }}</label>
               <textarea id="message" rows="4" placeholder="Conta mais sobre o projeto, prazo e orçamento..."
                 formControlName="message" [class.error]="isInvalid('message')"></textarea>
               <span class="err-msg" *ngIf="isInvalid('message')">Mínimo 10 caracteres</span>
@@ -90,7 +90,7 @@
                   <line x1="22" y1="2" x2="11" y2="13"></line>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
-                Enviar mensagem
+                {{ 'Enviar mensagem' | translate }}
               </span>
               <span *ngIf="loading" class="spinner"></span>
             </button>
@@ -114,7 +114,7 @@
 
       <!-- Serviços — Grid 2x2 -->
       <div class="services-section">
-        <p class="services-label">O que eu faço</p>
+        <p class="services-label">{{ 'O que eu faço' | translate }}</p>
         <div class="services-grid">
           <div class="service-item service-item--flutter">
             <div class="service-icon">
@@ -122,7 +122,7 @@
                 width="22" height="22" />
             </div>
             <div class="service-info">
-              <h3>Apps Mobile</h3>
+              <h3>{{ 'Apps Mobile' | translate }}</h3>
               <p>Android com Flutter e Dart. Performance nativa, UI moderna e Firebase integrado.</p>
             </div>
           </div>
@@ -132,21 +132,21 @@
                 alt="Angular" width="22" height="22" />
             </div>
             <div class="service-info">
-              <h3>Sites &amp; E-Commerce</h3>
+              <h3>{{ 'Sites & E-Commerce' | translate }}</h3>
               <p>Portfólios, landing pages e lojas virtuais com Angular. Rápido e responsivo.</p>
             </div>
           </div>
           <div class="service-item service-item--chat">
             <div class="service-icon">💬</div>
             <div class="service-info">
-              <h3>Chat &amp; Atendimento</h3>
+              <h3>{{ 'Chat & Atendimento' | translate }}</h3>
               <p>WhatsApp Business e atendimento automatizado para seu site ou app.</p>
             </div>
           </div>
           <div class="service-item service-item--ai">
             <div class="service-icon">🤖</div>
             <div class="service-info">
-              <h3>Recursos com IA</h3>
+              <h3>{{ 'Recursos com IA' | translate }}</h3>
               <p>Funcionalidades inteligentes — recomendações, automações e muito mais.</p>
             </div>
           </div>

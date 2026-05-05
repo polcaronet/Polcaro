@@ -12,7 +12,7 @@
           <div class="avatar-status"><span class="glow-dot green"></span></div>
         </div>
         <div class="sobre-intro">
-          <p class="section-eyebrow">Quem sou eu?</p>
+          <p class="section-eyebrow">{{ 'Quem sou eu?' | translate }}</p>
           <h1 class="section-title">Anselmo Polcaro</h1>
           <p class="sobre-role">
             <span class="mono">{{ '<' }}</span>
@@ -76,7 +76,7 @@
               stroke="currentColor" stroke-width="2.5">
               <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
-            Assistir agora
+            {{ 'Assistir agora' | translate }}
           </a>
           <a *ngIf="!isLive" href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener"
             class="streamer-status__btn streamer-status__btn--offline">
@@ -84,11 +84,11 @@
               stroke="currentColor" stroke-width="2">
               <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
             </svg>
-            Seguir no TikTok
+            {{ 'Seguir no TikTok' | translate }}
           </a>
         </div>
 
-        <h2 class="live-hero__title">Lives &amp; Batalhas</h2>
+        <h2 class="live-hero__title">{{ 'Lives & Batalhas' | translate }}</h2>
         <p class="live-hero__sub">Toda noite tem live! Batalhas, bate-papo, brincadeiras e às vezes um canto.<br>Vem
           fazer parte da galera! ⚔️🎙️</p>
         <div class="live-hero__actions">
@@ -123,27 +123,27 @@
 
       <!-- Programação -->
       <div class="prog-section">
-        <div class="prog-eyebrow"><span class="live-dot"></span>PROGRAMAÇÃO</div>
-        <h2 class="prog-title">Quando rola a live?</h2>
+        <div class="prog-eyebrow"><span class="live-dot"></span>{{ 'PROGRAMAÇÃO' | translate }}</div>
+        <h2 class="prog-title">{{ 'Quando rola a live?' | translate }}</h2>
         <div class="prog-grid">
           <div class="prog-card prog-card--schedule">
             <div class="prog-card__icon">🌙</div>
-            <div class="prog-card__label">HORÁRIO</div>
+            <div class="prog-card__label">{{ 'HORÁRIO' | translate }}</div>
             <div class="prog-card__value">18h – 23h</div>
-            <div class="prog-card__detail">Toda noite</div>
+            <div class="prog-card__detail">{{ 'Toda noite' | translate }}</div>
           </div>
           <div class="prog-card prog-card--days">
             <div class="prog-card__icon">📅</div>
-            <div class="prog-card__label">DIAS</div>
+            <div class="prog-card__label">{{ 'DIAS' | translate }}</div>
             <div class="prog-card__value">Seg → Dom</div>
-            <div class="prog-card__detail">Toda semana</div>
+            <div class="prog-card__detail">{{ 'Toda semana' | translate }}</div>
           </div>
           <div class="prog-card prog-card--platform">
             <div class="prog-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
               </svg></div>
-            <div class="prog-card__label">PLATAFORMA</div>
+            <div class="prog-card__label">{{ 'PLATAFORMA' | translate }}</div>
             <div class="prog-card__value">TikTok</div>
             <div class="prog-card__detail">&#64;anselmopolcaro</div>
           </div>
@@ -152,27 +152,27 @@
 
       <!-- O que rola -->
       <div class="content-section">
-        <div class="prog-eyebrow"><span>🎬</span>CONTEÚDO</div>
-        <h2 class="prog-title">O que rola nas lives?</h2>
+        <div class="prog-eyebrow"><span>🎬</span>{{ 'CONTEÚDO' | translate }}</div>
+        <h2 class="prog-title">{{ 'O que rola nas lives?' | translate }}</h2>
         <div class="content-grid">
           <div class="content-card">
             <div class="content-card__emoji">⚔️</div>
-            <h3>Batalhas</h3>
+            <h3>{{ 'Batalhas' | translate }}</h3>
             <p>Batalhas ao vivo com a galera. Energia alta, competição e muito entretenimento em tempo real.</p>
           </div>
           <div class="content-card">
             <div class="content-card__emoji">😂</div>
-            <h3>Humor &amp; Brincadeiras</h3>
+            <h3>{{ 'Humor & Brincadeiras' | translate }}</h3>
             <p>Risadas garantidas! Brincadeiras, memes ao vivo e situações engraçadas que só acontecem nas lives.</p>
           </div>
           <div class="content-card">
             <div class="content-card__emoji">💬</div>
-            <h3>Bate-papo</h3>
+            <h3>{{ 'Bate-papo' | translate }}</h3>
             <p>Conversa com a galera em tempo real. Respondo tudo, interajo com todo mundo e a vibe é sempre boa.</p>
           </div>
           <div class="content-card">
             <div class="content-card__emoji">🎵</div>
-            <h3>Canto às vezes</h3>
+            <h3>{{ 'Canto às vezes' | translate }}</h3>
             <p>Quando bate o clima, solto a voz ao vivo. A galera pede, eu canto — simples assim!</p>
           </div>
         </div>
@@ -191,7 +191,7 @@
           </svg>
           COMUNIDADE
         </div>
-        <h2>Entre no nosso Discord! 🎮</h2>
+        <h2>{{ 'Entre no nosso Discord! 🎮' | translate }}</h2>
         <p>O Discord é onde a galera se reúne! Fique por dentro das novidades, participe de conversas e troque ideia.
           Vem fazer parte! 💌</p>
         <a href="https://discord.gg/8xReATpPGk" target="_blank" rel="noopener" class="btn btn-discord">
@@ -202,7 +202,7 @@
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
-          Entrar no Discord
+          {{ 'Entrar no Discord' | translate }}
         </a>
       </div>
 
@@ -217,7 +217,7 @@
           </svg>
           COMUNIDADE
         </div>
-        <h2>Entre no nosso WhatsApp! 💬</h2>
+        <h2>{{ 'Entre no nosso WhatsApp! 💬' | translate }}</h2>
         <p>Também temos um grupo no WhatsApp! Fique por dentro das novidades e não perca nenhum conteúdo novo. Vem pra
           família! 🤝</p>
         <a href="https://chat.whatsapp.com/CAK0asIqmrEFLryLTz51WT" target="_blank" rel="noopener"
@@ -228,7 +228,7 @@
               d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
             </path>
           </svg>
-          Entrar no WhatsApp
+          {{ 'Entrar no WhatsApp' | translate }}
         </a>
       </div>
 
@@ -240,7 +240,7 @@
           </svg>
           GRUPO TIKTOK
         </div>
-        <h2>Entre no Grupo do TikTok! ⚔️</h2>
+        <h2>{{ 'Entre no Grupo do TikTok! ⚔️' | translate }}</h2>
         <p>Grupo oficial no TikTok! Fique por dentro das lives, batalhas e novidades em primeira mão. Vem fazer parte!
           🎙️</p>
         <a href="https://tiktok.me/group/ZS95yXeyR/" target="_blank" rel="noopener" class="btn btn-tiktok">
@@ -248,13 +248,13 @@
             stroke="currentColor" stroke-width="2">
             <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
           </svg>
-          Entrar no Grupo
+          {{ 'Entrar no Grupo' | translate }}
         </a>
       </div>
 
       <!-- Trajetória -->
       <div class="traj-section">
-        <h2 class="traj-title">Minha Trajetória</h2>
+        <h2 class="traj-title">{{ 'Minha Trajetória' | translate }}</h2>
         <div class="traj-line-wrap">
           <div class="traj-line"></div>
           <div class="traj-item" *ngFor="let item of timeline; let i = index" [class.traj-item--right]="i % 2 !== 0">

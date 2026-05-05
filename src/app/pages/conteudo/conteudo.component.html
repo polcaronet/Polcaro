@@ -65,8 +65,8 @@
       <!-- Header text -->
       <div class="conteudo-header">
         <div>
-          <p class="section-eyebrow">Dicas &amp; Atalhos</p>
-          <h1 class="section-title">Dicas de Programação</h1>
+          <p class="section-eyebrow">{{ 'Dicas & Atalhos' | translate }}</p>
+          <h1 class="section-title">{{ 'Dicas de Programação' | translate }}</h1>
           <p class="section-sub">
             Atalhos do VSCode, dicas de Flutter, Angular e ferramentas que uso no dia a dia.
             Tudo direto ao ponto, sem enrolação.
@@ -78,7 +78,7 @@
       <div class="filter-tabs">
         <button *ngFor="let cat of categories" class="filter-tab" [class.active]="activeCategory === cat"
           (click)="setCategory(cat)">
-          {{ cat }}
+          {{ cat === 'Todos' ? ('Todos' | translate) : cat }}
         </button>
       </div>
 
