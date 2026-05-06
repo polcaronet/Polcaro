@@ -22,7 +22,7 @@ import { Component } from '@angular/core';
           <div class="footer-info">
             <div class="footer-credit">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="16" height="16" />
-              <span class="footer-text">Feito com Flutter &amp; Angular por</span>
+              <span class="footer-text">{{ 'Feito com Flutter & Angular por' | translate }}</span>
               <span class="gold-name">Anselmo Polcaro</span>
             </div>
             <p class="footer-tagline">
@@ -34,7 +34,7 @@ import { Component } from '@angular/core';
               </span>
             </p>
             <button class="footer-expand-btn" (click)="bioOpen = !bioOpen">
-              <span>{{ bioOpen ? 'Ocultar' : 'Ler mais' }}</span>
+              <span>{{ bioOpen ? ('Ocultar' | translate) : ('Ler mais' | translate) }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" [style.transform]="bioOpen ? 'rotate(180deg)' : 'rotate(0deg)'" style="transition:transform 0.3s ease"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
           </div>
@@ -42,9 +42,9 @@ import { Component } from '@angular/core';
 
         <!-- Links legais -->
         <div class="footer-legal">
-          <a routerLink="/privacidade">Política de Privacidade</a>
+          <a routerLink="/privacidade">{{ 'Política de Privacidade' | translate }}</a>
           <span class="sep">·</span>
-          <a routerLink="/termos">Termos de Uso</a>
+          <a routerLink="/termos">{{ 'Termos de Uso' | translate }}</a>
         </div>
 
       </div>

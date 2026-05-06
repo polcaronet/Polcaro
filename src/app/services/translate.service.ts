@@ -194,6 +194,25 @@ const EN_TRANSLATIONS: Record<string, string> = {
   // Status live
   'VERIFICANDO...': 'CHECKING...',
   'Checando status da live...': 'Checking live status...',
+
+  // Navbar
+  'Dev de Sucesso': 'Successful Dev',
+  'Streamer de Sucesso': 'Successful Streamer',
+
+  // Sobre page - links
+  'Coins': 'Coins',
+  'Galeria de Arte': 'Art Gallery',
+  '👉 Recarregar 👈': '👉 Recharge 👈',
+
+  // Live status (from TS)
+  'assistindo agora 🔥': 'watching now 🔥',
+
+  // Footer
+  'Feito com Flutter & Angular por': 'Made with Flutter & Angular by',
+  'Ler mais': 'Read more',
+  'Ocultar': 'Hide',
+  'Política de Privacidade': 'Privacy Policy',
+  'Termos de Uso': 'Terms of Use',
 };
 
 const ES_TRANSLATIONS: Record<string, string> = {
@@ -275,6 +294,17 @@ const ES_TRANSLATIONS: Record<string, string> = {
   // Status
   'VERIFICANDO...': 'VERIFICANDO...',
   'Checando status da live...': 'Verificando estado de la live...',
+
+  'Dev de Sucesso': 'Dev Exitoso',
+  'Streamer de Sucesso': 'Streamer Exitoso',
+  'Coins': 'Coins',
+  'Galeria de Arte': 'Galería de Arte',
+  '👉 Recarregar 👈': '👉 Recargar 👈',
+  'Feito com Flutter & Angular por': 'Hecho con Flutter & Angular por',
+  'Ler mais': 'Leer más',
+  'Ocultar': 'Ocultar',
+  'Política de Privacidade': 'Política de Privacidad',
+  'Termos de Uso': 'Términos de Uso',
 };
 
 const FR_TRANSLATIONS: Record<string, string> = {
@@ -316,6 +346,17 @@ const FR_TRANSLATIONS: Record<string, string> = {
   'Minha Trajetória': 'Mon Parcours',
   'VERIFICANDO...': 'VÉRIFICATION...',
   'Checando status da live...': 'Vérification du statut...',
+
+  'Dev de Sucesso': 'Dev à Succès',
+  'Streamer de Sucesso': 'Streamer à Succès',
+  'Coins': 'Coins',
+  'Galeria de Arte': 'Galerie d\'Art',
+  '👉 Recarregar 👈': '👉 Recharger 👈',
+  'Feito com Flutter & Angular por': 'Fait avec Flutter & Angular par',
+  'Ler mais': 'Lire plus',
+  'Ocultar': 'Masquer',
+  'Política de Privacidade': 'Politique de Confidentialité',
+  'Termos de Uso': 'Conditions d\'Utilisation',
 };
 
 const AR_TRANSLATIONS: Record<string, string> = {
@@ -357,4 +398,15 @@ const AR_TRANSLATIONS: Record<string, string> = {
   'Minha Trajetória': 'مسيرتي',
   'VERIFICANDO...': 'جاري التحقق...',
   'Checando status da live...': 'التحقق من حالة البث...',
+
+  'Dev de Sucesso': 'مطور ناجح',
+  'Streamer de Sucesso': 'ستريمر ناجح',
+  'Coins': 'عملات',
+  'Galeria de Arte': 'معرض الفن',
+  '👉 Recarregar 👈': '👉 شحن 👈',
+  'Feito com Flutter & Angular por': 'صنع بـ Flutter & Angular بواسطة',
+  'Ler mais': 'اقرأ المزيد',
+  'Ocultar': 'إخفاء',
+  'Política de Privacidade': 'سياسة الخصوصية',
+  'Termos de Uso': 'شروط الاستخدام',
 };
