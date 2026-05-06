@@ -26,11 +26,9 @@ import { Component } from '@angular/core';
               <span class="gold-name">Anselmo Polcaro</span>
             </div>
             <p class="footer-tagline">
-              <strong>Anselmo Polcaro</strong>, brasileiro, apaixonado por desenvolvimento de
-              <strong>Apps</strong> em <strong>Flutter</strong> com <strong>Dart.</strong>
+              {{ 'Anselmo Polcaro, brasileiro, apaixonado por desenvolvimento de Apps em Flutter com Dart.' | translate }}
               <span class="footer-bio-extra" [class.footer-bio-extra--visible]="bioOpen">
-                Atualmente focado em Aplicativos <strong>Mobile</strong> e <strong>E-Commerce</strong> em geral.
-                Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂
+                {{ 'Atualmente focado em Aplicativos Mobile e E-Commerce em geral. Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂' | translate }}
               </span>
             </p>
             <button class="footer-expand-btn" (click)="bioOpen = !bioOpen">
