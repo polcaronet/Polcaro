@@ -213,6 +213,8 @@ const EN_TRANSLATIONS: Record<string, string> = {
   'Ocultar': 'Hide',
   'Política de Privacidade': 'Privacy Policy',
   'Termos de Uso': 'Terms of Use',
+  'Descreva brevemente seu projeto': 'Briefly describe your project',
+  'Conta mais sobre o projeto, prazo e orçamento...': 'Tell me more about the project, deadline and budget...',
 };
 
 const ES_TRANSLATIONS: Record<string, string> = {
@@ -305,6 +307,8 @@ const ES_TRANSLATIONS: Record<string, string> = {
   'Ocultar': 'Ocultar',
   'Política de Privacidade': 'Política de Privacidad',
   'Termos de Uso': 'Términos de Uso',
+  'Descreva brevemente seu projeto': 'Describe brevemente tu proyecto',
+  'Conta mais sobre o projeto, prazo e orçamento...': 'Cuéntame más sobre el proyecto, plazo y presupuesto...',
 };
 
 const FR_TRANSLATIONS: Record<string, string> = {
@@ -357,6 +361,8 @@ const FR_TRANSLATIONS: Record<string, string> = {
   'Ocultar': 'Masquer',
   'Política de Privacidade': 'Politique de Confidentialité',
   'Termos de Uso': 'Conditions d\'Utilisation',
+  'Descreva brevemente seu projeto': 'Décrivez brièvement votre projet',
+  'Conta mais sobre o projeto, prazo e orçamento...': 'Dites-moi plus sur le projet, délai et budget...',
 };
 
 const AR_TRANSLATIONS: Record<string, string> = {
@@ -409,4 +415,6 @@ const AR_TRANSLATIONS: Record<string, string> = {
   'Ocultar': 'إخفاء',
   'Política de Privacidade': 'سياسة الخصوصية',
   'Termos de Uso': 'شروط الاستخدام',
+  'Descreva brevemente seu projeto': 'صف مشروعك باختصار',
+  'Conta mais sobre o projeto, prazo e orçamento...': 'أخبرني المزيد عن المشروع والموعد والميزانية...',
 };

@@ -10,7 +10,8 @@
           <p class="section-eyebrow">{{ 'Contato' | translate }}</p>
           <h1 class="section-title">{{ 'Vamos' | translate }}<br>{{ 'conversar?' | translate }}</h1>
           <p class="contato-desc">
-            Tem um projeto em mente? Me conta! Desenvolvo apps mobile e sites profissionais com qualidade e prazo.
+            {{ 'Tem um projeto em mente? Me conta! Desenvolvo apps mobile e sites profissionais com qualidade e prazo.'
+            | translate }}
           </p>
           <a href="mailto:polcaronet@gmail.com" class="email-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -38,12 +39,12 @@
 
           <form class="contact-form" *ngIf="!sent" [formGroup]="form" (ngSubmit)="submit()">
             <h2 class="form-title">{{ 'Enviar mensagem' | translate }}</h2>
-            <p class="form-subtitle">Preencha e eu entro em contato em até 24h 🚀</p>
+            <p class="form-subtitle">{{ 'Preencha e eu entro em contato em até 24h 🚀' | translate }}</p>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="name">{{ 'Nome' | translate }}</label>
-                <input id="name" type="text" placeholder="Seu nome" formControlName="name"
+                <input id="name" type="text" [placeholder]="'Seu nome' | translate" formControlName="name"
                   [class.error]="isInvalid('name')" />
                 <span class="err-msg" *ngIf="isInvalid('name')">Nome obrigatório</span>
               </div>
@@ -71,15 +72,16 @@
 
             <div class="form-group">
               <label for="subject">{{ 'Assunto' | translate }}</label>
-              <input id="subject" type="text" placeholder="Descreva brevemente seu projeto" formControlName="subject"
-                [class.error]="isInvalid('subject')" />
+              <input id="subject" type="text" [placeholder]="'Descreva brevemente seu projeto' | translate"
+                formControlName="subject" [class.error]="isInvalid('subject')" />
               <span class="err-msg" *ngIf="isInvalid('subject')">Assunto obrigatório</span>
             </div>
 
             <div class="form-group">
               <label for="message">{{ 'Mensagem' | translate }}</label>
-              <textarea id="message" rows="4" placeholder="Conta mais sobre o projeto, prazo e orçamento..."
-                formControlName="message" [class.error]="isInvalid('message')"></textarea>
+              <textarea id="message" rows="4"
+                [placeholder]="'Conta mais sobre o projeto, prazo e orçamento...' | translate" formControlName="message"
+                [class.error]="isInvalid('message')"></textarea>
               <span class="err-msg" *ngIf="isInvalid('message')">Mínimo 10 caracteres</span>
             </div>
 

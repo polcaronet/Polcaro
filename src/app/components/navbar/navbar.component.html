@@ -17,7 +17,7 @@
         <a [routerLink]="link.path" routerLinkActive="navbar__link--active"
           [routerLinkActiveOptions]="{ exact: link.path === '/' }" class="navbar__link">
           <span class="nav-icon" [innerHTML]="getIcon(link.icon)"></span>
-          {{ link.label }}
+          {{ link.label | translate }}
           <span *ngIf="link.badge" class="nav-badge" [ngClass]="'nav-badge--' + link.badge.type">
             <span *ngIf="link.badge.type === 'red'" class="glow-dot"></span>
             {{ link.badge.text }}
@@ -72,7 +72,7 @@
       <a [routerLink]="link.path" routerLinkActive="mobile-link--active"
         [routerLinkActiveOptions]="{ exact: link.path === '/' }" class="mobile-link">
         <span class="nav-icon" [innerHTML]="getIcon(link.icon)"></span>
-        {{ link.label }}
+        {{ link.label | translate }}
         <span *ngIf="link.badge" class="nav-badge" [ngClass]="'nav-badge--' + link.badge.type">
           <span *ngIf="link.badge.type === 'red'" class="glow-dot"></span>
           {{ link.badge.text }}
