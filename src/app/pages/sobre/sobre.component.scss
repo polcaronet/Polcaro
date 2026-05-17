@@ -1984,16 +1984,18 @@
   }
 }
 
-[data-theme="blue"] .sobre-hero-section::before {
+:host-context([data-theme="blue"]) .sobre-hero-section::before {
   background: linear-gradient(to right,
-      var(--bg-primary) 45%,
-      rgba(12, 25, 41, 0.5) 100%);
+      var(--bg-primary) 40%,
+      rgba(12, 25, 41, 0.85) 65%,
+      rgba(12, 25, 41, 0.6) 100%);
 }
 
-[data-theme="dark"] .sobre-hero-section::before {
+:host-context([data-theme="dark"]) .sobre-hero-section::before {
   background: linear-gradient(to right,
-      var(--bg-primary) 45%,
-      rgba(10, 10, 10, 0.5) 100%);
+      var(--bg-primary) 40%,
+      rgba(10, 10, 10, 0.85) 65%,
+      rgba(10, 10, 10, 0.6) 100%);
 }
 
 /* ══ Celulares pequenos (A10s, J7 Prime) ═════════ */
