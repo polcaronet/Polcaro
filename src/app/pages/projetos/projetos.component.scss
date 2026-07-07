@@ -414,3 +414,27 @@
     font-size: 0.78rem;
   }
 }
+
+/* ── A10s (360px) ────────────────── */
+@media (max-width: 360px) {
+  .repos-grid {
+    gap: 10px;
+  }
+
+  .repo-card {
+    padding: 14px;
+  }
+
+  .repo-name {
+    font-size: 0.82rem;
+  }
+
+  .repo-desc {
+    font-size: 0.75rem;
+  }
+
+  .topic-tag {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+}

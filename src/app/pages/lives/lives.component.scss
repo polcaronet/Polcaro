@@ -450,3 +450,96 @@
     padding: 56px 0 48px;
   }
 }
+
+@media (max-width: 400px) {
+  .live-hero {
+    padding: 40px 0 32px;
+  }
+
+  .live-hero__title {
+    font-size: 1.6rem;
+  }
+
+  .live-hero__sub {
+    font-size: 0.85rem;
+  }
+
+  .live-hero__actions {
+    width: 100%;
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .prog-card {
+    padding: 18px 14px;
+  }
+
+  .prog-card__value {
+    font-size: 1rem;
+  }
+
+  .prog-title {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  .content-card {
+    padding: 16px 14px;
+
+    h3 {
+      font-size: 0.9rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .notify-card {
+    padding: 18px 16px;
+    gap: 14px;
+
+    h3 {
+      font-size: 0.9rem;
+    }
+
+    p {
+      font-size: 0.78rem;
+    }
+
+    &__actions {
+      width: 100%;
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  .community-row {
+    gap: 10px;
+  }
+
+  .comm-card {
+    padding: 14px 16px;
+    gap: 10px;
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+    }
+
+    h4 {
+      font-size: 0.82rem;
+    }
+
+    p {
+      font-size: 0.68rem;
+    }
+  }
+}

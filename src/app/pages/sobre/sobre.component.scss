@@ -2004,6 +2004,10 @@
     gap: 20px;
   }
 
+  .sobre-hero-section {
+    background-image: none;
+  }
+
   .avatar-wrap,
   .avatar-img,
   .avatar-ring {
@@ -2048,15 +2052,54 @@
   }
 
   .live-hero {
-    padding: 48px 0 40px;
+    padding: 40px 0 32px;
+  }
+
+  .live-hero__layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .live-hero__left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .live-hero__right {
+    display: none;
   }
 
   .live-hero__title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .live-hero__sub {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .live-hero__actions {
+    width: 100%;
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .streamer-status {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
+    &__btn {
+      margin-left: 0;
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   .prog-grid {
@@ -2128,5 +2171,140 @@
   .traj-icon-wrap svg {
     width: 16px;
     height: 16px;
+  }
+}
+
+/* ── A10s e similares (360px) ────────────────── */
+@media (max-width: 360px) {
+  .sobre-hero {
+    gap: 14px;
+  }
+
+  .avatar-wrap,
+  .avatar-img,
+  .avatar-ring {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sobre-role {
+    font-size: 0.72rem;
+  }
+
+  .icon-links-row {
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .icon-link-bubble {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .icon-link-label {
+    font-size: 0.65rem;
+  }
+
+  .icon-link-sub {
+    font-size: 0.58rem;
+  }
+
+  .live-hero {
+    padding: 28px 0 24px;
+  }
+
+  .live-hero__title {
+    font-size: 1.3rem;
+  }
+
+  .live-hero__sub {
+    font-size: 0.78rem;
+  }
+
+  .streamer-status {
+    padding: 10px 12px;
+    gap: 6px;
+
+    &__label {
+      font-size: 0.72rem;
+    }
+
+    &__sub {
+      font-size: 0.65rem;
+    }
+
+    &__btn {
+      font-size: 0.7rem;
+      padding: 6px 14px;
+    }
+  }
+
+  .prog-card {
+    padding: 16px 12px;
+  }
+
+  .prog-card__value {
+    font-size: 1rem;
+  }
+
+  .prog-title {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .content-card {
+    padding: 16px 12px;
+
+    h3 {
+      font-size: 0.88rem;
+    }
+
+    p {
+      font-size: 0.78rem;
+    }
+  }
+
+  .community-card {
+    padding: 20px 12px;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.78rem;
+    }
+  }
+
+  .traj-title {
+    font-size: 1.2rem;
+  }
+
+  .traj-card {
+    padding: 12px 14px;
+  }
+
+  .traj-card-title {
+    font-size: 0.82rem;
+  }
+
+  .traj-card-desc {
+    font-size: 0.72rem;
+  }
+
+  .traj-icon-wrap {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
   }
 }

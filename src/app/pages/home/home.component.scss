@@ -786,6 +786,8 @@
   .hero__actions .btn {
     width: 100%;
     justify-content: center;
+    padding: 11px 16px;
+    font-size: 0.82rem;
   }
 
   .skills-strip {
@@ -801,6 +803,30 @@
     gap: 10px;
   }
 
+  .quick-card {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .quick-card__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .quick-card__text h3 {
+    font-size: 0.82rem;
+  }
+
+  .quick-card__text p {
+    font-size: 0.7rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -808,5 +834,125 @@
 
   .proj-card {
     padding: 16px;
+    gap: 10px;
+
+    h3 {
+      font-size: 0.95rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .tags-row {
+    gap: 4px;
+  }
+
+  .tiktok-cta-banner {
+    padding: 20px 16px;
+    gap: 14px;
+    border-radius: 18px;
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .tiktok-cta-section {
+    padding: 0 0 48px;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+  }
+}
+
+/* ── A10s e similares (360px) ────────────────── */
+@media (max-width: 360px) {
+  .hero__content {
+    padding: 28px 0;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__tag {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    margin-bottom: 16px;
+  }
+
+  .typing-text,
+  .typing-cursor {
+    font-size: 0.8rem;
+  }
+
+  .hero__actions .btn {
+    padding: 10px 12px;
+    font-size: 0.78rem;
+  }
+
+  .skills-strip {
+    gap: 4px;
+  }
+
+  .skill-chip {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    gap: 4px;
+  }
+
+  .quick-card {
+    padding: 12px 14px;
+    gap: 8px;
+    border-radius: 12px;
+  }
+
+  .quick-card__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .quick-card__text h3 {
+    font-size: 0.78rem;
+  }
+
+  .quick-card__text p {
+    font-size: 0.65rem;
+  }
+
+  .proj-card {
+    padding: 14px;
+
+    h3 {
+      font-size: 0.88rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+  }
+
+  .proj-stats {
+    font-size: 0.7rem;
+    gap: 10px;
   }
 }

@@ -147,12 +147,29 @@
   font-size: 0.78rem;
   line-height: 1.75;
   min-height: 240px;
+  overflow-x: auto;
 }
 
 .terminal-line {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media (max-width: 400px) {
+  .terminal-body {
+    padding: 12px 14px;
+    font-size: 0.68rem;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 360px) {
+  .terminal-body {
+    padding: 10px 10px;
+    font-size: 0.62rem;
+    min-height: 150px;
+  }
 }
 
 .t-dim {

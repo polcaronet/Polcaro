@@ -513,3 +513,33 @@ textarea {
     padding: 12px;
   }
 }
+
+/* ── A10s (360px) ────────────────── */
+@media (max-width: 360px) {
+  .contact-form {
+    padding: 14px 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.78rem;
+    padding: 8px 10px;
+  }
+
+  .form-group label {
+    font-size: 0.72rem;
+  }
+
+  .social-chip {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+
+  .contato-intro h1 {
+    font-size: 1.4rem;
+  }
+
+  .contato-intro p {
+    font-size: 0.82rem;
+  }
+}
