@@ -469,7 +469,7 @@
 @media (max-width: 360px) {
   .navbar__inner {
     padding: 0 8px;
-    gap: 6px;
+    gap: 4px;
   }
 
   .logo__name {
@@ -481,13 +481,7 @@
   }
 
   .theme-switcher {
-    padding: 2px 4px;
-    gap: 3px;
-  }
-
-  .theme-dot {
-    width: 16px;
-    height: 16px;
+    display: none;
   }
 
   .lang-selector__flag {
