@@ -477,11 +477,22 @@
   }
 
   .logo__roles {
-    display: none;
+    font-size: 0.5rem;
+  }
+
+  .logo__role--gold {
+    font-size: 0.5rem;
   }
 
   .theme-switcher {
-    display: none;
+    padding: 2px 4px;
+    gap: 2px;
+  }
+
+  .theme-dot {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
   }
 
   .lang-selector__flag {
@@ -490,7 +501,7 @@
   }
 
   .navbar__hamburger {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 }
