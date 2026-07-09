@@ -80,4 +80,14 @@
       </a>
     </li>
   </ul>
+  <div class="mobile-menu__theme">
+    <div class="theme-switcher theme-switcher--mobile">
+      <button class="theme-dot theme-dot--light" [class.active]="currentTheme === 'light'" (click)="setTheme('light')"
+        aria-label="Tema branco"></button>
+      <button class="theme-dot theme-dot--blue" [class.active]="currentTheme === 'blue'" (click)="setTheme('blue')"
+        aria-label="Tema azul"></button>
+      <button class="theme-dot theme-dot--dark" [class.active]="currentTheme === 'dark'" (click)="setTheme('dark')"
+        aria-label="Tema preto"></button>
+    </div>
+  </div>
 </div>
