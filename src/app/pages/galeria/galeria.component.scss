@@ -1,7 +1,7 @@
 /* ══ GALERIA HERO ═════════════════════════════════ */
 .galeria-hero {
   position: relative;
-  padding: 120px 0 100px;
+  padding: 80px 0 60px;
   overflow: hidden;
   background-image: url('/assets/damiao-banner.png');
   background-size: contain;
@@ -31,7 +31,7 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 20px;
+  gap: 16px;
   max-width: 55%;
 }
 
@@ -269,6 +269,7 @@
 
   .galeria-hero {
     background-image: none;
+    padding: 48px 0 40px;
   }
 
   .galeria-hero__content {
@@ -284,7 +285,7 @@
   }
 
   .galeria-hero {
-    padding: 80px 0 60px;
+    padding: 36px 0 28px;
   }
 
   .galeria-hero__title {
@@ -298,7 +299,7 @@
 
 @media (max-width: 400px) {
   .galeria-hero {
-    padding: 60px 0 40px;
+    padding: 28px 0 20px;
   }
 
   .galeria-hero__title {
