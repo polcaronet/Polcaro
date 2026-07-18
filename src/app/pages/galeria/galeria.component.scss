@@ -4,8 +4,8 @@
   padding: 80px 0 60px;
   overflow: hidden;
   background-image: url('/assets/damiao-banner.png');
-  background-size: cover;
-  background-position: center right;
+  background-size: contain;
+  background-position: right center;
   background-repeat: no-repeat;
 
   &::before {
@@ -13,9 +13,8 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-        var(--bg-primary) 35%,
-        rgba(244, 243, 255, 0.92) 55%,
-        rgba(244, 243, 255, 0.6) 100%);
+        var(--bg-primary) 45%,
+        rgba(244, 243, 255, 0.4) 100%);
     z-index: 0;
     pointer-events: none;
   }
@@ -76,16 +75,14 @@
 
 :host-context([data-theme="blue"]) .galeria-hero::before {
   background: linear-gradient(to right,
-      var(--bg-primary) 35%,
-      rgba(12, 25, 41, 0.92) 55%,
-      rgba(12, 25, 41, 0.6) 100%);
+      var(--bg-primary) 45%,
+      rgba(12, 25, 41, 0.5) 100%);
 }
 
 :host-context([data-theme="dark"]) .galeria-hero::before {
   background: linear-gradient(to right,
-      var(--bg-primary) 35%,
-      rgba(10, 10, 10, 0.92) 55%,
-      rgba(10, 10, 10, 0.6) 100%);
+      var(--bg-primary) 45%,
+      rgba(10, 10, 10, 0.5) 100%);
 }
 
 /* ══ ARTIST SECTION ══════════════════════════════ */
