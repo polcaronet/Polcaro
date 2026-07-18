@@ -73,6 +73,20 @@
   margin-top: 8px;
 }
 
+.icon-spin {
+  animation: globeSpin 6s linear infinite;
+}
+
+@keyframes globeSpin {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
 :host-context([data-theme="blue"]) .galeria-hero::before {
   background: linear-gradient(to right,
       var(--bg-primary) 45%,
