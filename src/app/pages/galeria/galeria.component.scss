@@ -266,8 +266,15 @@
   }
 
   .galeria-hero {
-    background-image: none;
     padding: 48px 0 40px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .galeria-hero::before {
+    background: linear-gradient(to bottom,
+        var(--bg-primary) 40%,
+        rgba(244, 243, 255, 0.4) 100%);
   }
 
   .galeria-hero__content {
