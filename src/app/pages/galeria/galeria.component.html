@@ -1,0 +1,152 @@
+<div class="page">
+
+  <!-- Hero -->
+  <section class="galeria-hero">
+    <div class="galeria-hero__bg">
+      <div class="galeria-hero__orb galeria-hero__orb--1"></div>
+      <div class="galeria-hero__orb galeria-hero__orb--2"></div>
+    </div>
+    <div class="container galeria-hero__content">
+      <div class="galeria-badge">
+        <span>🎨</span> {{ 'Galeria de Arte' | translate }}
+      </div>
+      <h1 class="galeria-hero__title">Damião Martins</h1>
+      <p class="galeria-hero__sub">
+        {{ 'Artista plástico brasileiro. Conheça suas obras, compre quadros originais e acompanhe pelo aplicativo.' | translate }}
+      </p>
+      <div class="galeria-hero__actions">
+        <a href="https://damiaomartins.com.br" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          {{ 'Visitar Site' | translate }}
+        </a>
+        <a href="#" class="btn btn-ghost btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+          {{ 'Baixar App' | translate }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre o artista -->
+  <section class="section">
+    <div class="container">
+      <div class="artist-section">
+        <div class="prog-eyebrow"><span>👨‍🎨</span> {{ 'SOBRE O ARTISTA' | translate }}</div>
+        <h2 class="prog-title">{{ 'Quem é Damião Martins?' | translate }}</h2>
+        <div class="artist-card card">
+          <div class="artist-card__content">
+            <p>{{ 'Damião Martins é um artista plástico brasileiro com obras que expressam a cultura, natureza e emoções através de cores vibrantes e traços únicos.' | translate }}</p>
+            <p>{{ 'Suas obras podem ser adquiridas diretamente pelo site ou pelo aplicativo, com pagamento via PIX e entrega para todo o Brasil.' | translate }}</p>
+            <a href="https://damiaomartins.com.br" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              {{ 'Conhecer obras' | translate }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- App -->
+      <div class="app-section">
+        <div class="prog-eyebrow"><span>📱</span> {{ 'APLICATIVO' | translate }}</div>
+        <h2 class="prog-title">Art Plastic — App Mobile</h2>
+        <p class="app-desc">{{ 'Aplicativo de e-commerce de arte desenvolvido em Flutter com Dart. Galeria de quadros, pagamentos PIX, rastreio de encomendas e suporte com IA.' | translate }}</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-card__emoji">🖼️</div>
+            <h3>{{ 'Galeria HD' | translate }}</h3>
+            <p>{{ 'Obras em alta resolução com zoom e detalhes' | translate }}</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__emoji">💳</div>
+            <h3>{{ 'Pagamento PIX' | translate }}</h3>
+            <p>{{ 'Checkout rápido via MercadoPago' | translate }}</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__emoji">📦</div>
+            <h3>{{ 'Rastreio' | translate }}</h3>
+            <p>{{ 'Acompanhe sua encomenda pelos Correios' | translate }}</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__emoji">🤖</div>
+            <h3>{{ 'Suporte IA' | translate }}</h3>
+            <p>{{ 'Chat inteligente sobre as obras com Gemini' | translate }}</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__emoji">🌍</div>
+            <h3>{{ '8 Idiomas' | translate }}</h3>
+            <p>{{ 'Interface traduzida com conversão de moedas' | translate }}</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__emoji">🔐</div>
+            <h3>{{ 'Login Google' | translate }}</h3>
+            <p>{{ 'Acesso rápido e seguro com sua conta Google' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tecnologias -->
+      <div class="tech-section">
+        <div class="prog-eyebrow"><span>⚙️</span> {{ 'TECNOLOGIAS' | translate }}</div>
+        <h2 class="prog-title">{{ 'Stack do Projeto' | translate }}</h2>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <span class="tech-label">Frontend</span>
+            <span class="tech-value">Flutter + Dart + Riverpod</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">Backend</span>
+            <span class="tech-value">Python (FastAPI)</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">{{ 'Banco' | translate }}</span>
+            <span class="tech-value">Firebase Firestore</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">{{ 'Pagamentos' | translate }}</span>
+            <span class="tech-value">MercadoPago (PIX)</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">IA</span>
+            <span class="tech-value">Google Gemini 2.5 Flash</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">{{ 'Hospedagem' | translate }}</span>
+            <span class="tech-value">Leapcell + Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="galeria-cta card">
+        <div class="galeria-cta__icon">🎨</div>
+        <div class="galeria-cta__text">
+          <h3>{{ 'Conheça as obras de Damião Martins' | translate }}</h3>
+          <p>{{ 'Acesse o site ou baixe o aplicativo para explorar a galeria completa.' | translate }}</p>
+        </div>
+        <div class="galeria-cta__actions">
+          <a href="https://damiaomartins.com.br" target="_blank" rel="noopener" class="btn btn-primary">
+            {{ 'Visitar Site' | translate }}
+          </a>
+          <a href="#" class="btn btn-ghost">
+            {{ 'Baixar App' | translate }}
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

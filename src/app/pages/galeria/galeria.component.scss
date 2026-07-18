@@ -1,0 +1,343 @@
+/* ══ GALERIA HERO ═════════════════════════════════ */
+.galeria-hero {
+  position: relative;
+  padding: 100px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a0a00, #2d1500, #1a0a00);
+}
+
+.galeria-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.galeria-hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+
+  &--1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #f5a623, transparent 70%);
+    top: -120px;
+    left: -100px;
+  }
+
+  &--2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #e91e63, transparent 70%);
+    bottom: -80px;
+    right: -60px;
+  }
+}
+
+.galeria-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.galeria-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(245, 166, 35, 0.15);
+  border: 1.5px solid rgba(245, 166, 35, 0.4);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f5a623;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.galeria-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+}
+
+.galeria-hero__sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.galeria-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+:host-context([data-theme="blue"]) .galeria-hero {
+  background: linear-gradient(135deg, #060d1a, #0c1929, #0a1525);
+}
+
+:host-context([data-theme="dark"]) .galeria-hero {
+  background: linear-gradient(135deg, #050505, #0a0a0a, #0d0d0d);
+}
+
+/* ══ ARTIST SECTION ══════════════════════════════ */
+.artist-section {
+  margin-bottom: 64px;
+}
+
+.artist-card {
+  padding: 36px;
+}
+
+.artist-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+}
+
+/* ══ APP SECTION ═════════════════════════════════ */
+.app-section {
+  margin-bottom: 64px;
+}
+
+.app-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &__emoji {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+}
+
+/* ══ TECH SECTION ════════════════════════════════ */
+.tech-section {
+  margin-bottom: 64px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+}
+
+.tech-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  min-width: 80px;
+}
+
+.tech-value {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ══ CTA ═════════════════════════════════════════ */
+.galeria-cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 36px;
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.05), rgba(233, 30, 99, 0.05));
+  border-color: rgba(245, 166, 35, 0.2);
+
+  &__icon {
+    font-size: 2.4rem;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    flex: 1;
+
+    h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+}
+
+/* ══ PROG EYEBROW (reusado) ══════════════════════ */
+.prog-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f5a623;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.prog-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+/* ══ RESPONSIVE ══════════════════════════════════ */
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-cta {
+    flex-direction: column;
+    text-align: center;
+
+    &__actions {
+      flex-direction: column;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-hero {
+    padding: 60px 0 48px;
+  }
+
+  .galeria-hero__title {
+    font-size: 2rem;
+  }
+
+  .artist-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .galeria-hero {
+    padding: 40px 0 32px;
+  }
+
+  .galeria-hero__title {
+    font-size: 1.6rem;
+  }
+
+  .galeria-hero__sub {
+    font-size: 0.85rem;
+  }
+
+  .feature-card {
+    padding: 18px 14px;
+
+    h3 {
+      font-size: 0.85rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+  .tech-item {
+    padding: 12px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .galeria-cta {
+    padding: 24px 16px;
+  }
+}
