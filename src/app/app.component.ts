@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
         <div class="footer-avatar-row">
           <div class="footer-avatar-wrap">
             <img
-              src="https://avatars.githubusercontent.com/polcaronet"
+              src="/assets/eu_dev.png"
               alt="Anselmo Polcaro"
               class="footer-avatar"
               onerror="this.src='https://ui-avatars.com/api/?name=Anselmo+Polcaro&background=6c63ff&color=fff&size=80'"
