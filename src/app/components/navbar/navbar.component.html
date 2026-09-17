@@ -27,6 +27,12 @@
     </ul>
 
     <div class="navbar__actions">
+      <!-- Compartilhar -->
+      <button type="button" class="navbar__share" (click)="share()" title="Compartilhar o site">
+        <span class="nav-icon" [innerHTML]="getIcon('share')"></span>
+        {{ shared ? ('Copiado! ✅' | translate) : ('Compartilhar' | translate) }}
+      </button>
+
       <!-- Pix -->
       <a routerLink="/" fragment="pix" class="navbar__pix" title="Faça um Pix">
         <span class="nav-icon" [innerHTML]="getIcon('pix')"></span>
@@ -91,6 +97,12 @@
           {{ link.badge.text }}
         </span>
       </a>
+    </li>
+    <li>
+      <button type="button" class="mobile-link mobile-link--share" (click)="share()">
+        <span class="nav-icon" [innerHTML]="getIcon('share')"></span>
+        {{ shared ? ('Copiado! ✅' | translate) : ('Compartilhar' | translate) }}
+      </button>
     </li>
     <li>
       <a routerLink="/" fragment="pix" class="mobile-link mobile-link--pix">
