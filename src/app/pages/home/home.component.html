@@ -24,14 +24,6 @@
       </div>
 
       <div class="hero__actions animate-4">
-        <a routerLink="/projetos" class="btn btn-primary">
-          {{ 'Ver Projetos' | translate }}
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
         <a href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener" class="btn btn-tiktok">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2">
@@ -39,7 +31,9 @@
           </svg>
           TikTok &#64;anselmopolcaro
         </a>
-        <a routerLink="/contato" class="btn btn-ghost">{{ 'Contato' | translate }}</a>
+        <a href="https://www.instagram.com/polcaronet" target="_blank" rel="noopener" class="btn btn-ghost">
+          Instagram &#64;polcaronet
+        </a>
       </div>
 
       <div class="skills-strip animate-5">
@@ -55,45 +49,6 @@
   <section class="section quick-section">
     <div class="container">
       <div class="quick-grid">
-
-        <a routerLink="/projetos" class="quick-card quick-card--mobile">
-          <div class="quick-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-              <line x1="12" y1="18" x2="12.01" y2="18"></line>
-            </svg>
-          </div>
-          <div class="quick-card__text">
-            <h3>{{ 'Apps Flutter' | translate }}</h3>
-            <p>{{ 'Aplicativos Android com Dart' | translate }}</p>
-          </div>
-          <svg class="quick-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-
-        <a routerLink="/projetos" class="quick-card quick-card--web">
-          <div class="quick-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-          </div>
-          <div class="quick-card__text">
-            <h3>{{ 'Sites & Landing Pages' | translate }}</h3>
-            <p>Angular + TypeScript</p>
-          </div>
-          <svg class="quick-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
 
         <a routerLink="/sobre" class="quick-card quick-card--tiktok" [class.quick-card--live]="isLive">
           <div class="quick-card__icon">
@@ -152,81 +107,5 @@
       </div>
     </div>
   </section>
-
-  <!-- Featured projects -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <p class="section-eyebrow">{{ 'Portfólio' | translate }}</p>
-          <h2 class="section-title" style="font-size:2rem;">{{ 'Projetos em destaque' | translate }}</h2>
-        </div>
-        <a routerLink="/projetos" class="btn btn-ghost btn-sm">
-          {{ 'Ver todos' | translate }}
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-      </div>
-
-      <div class="projects-grid">
-        <article class="proj-card card" *ngFor="let p of featuredProjects">
-          <div class="proj-top">
-            <span class="badge" [ngClass]="p.category === 'Mobile' ? 'badge-purple' : 'badge-green'">
-              {{ p.category }}
-            </span>
-            <div class="proj-links">
-              <a [href]="p.github" target="_blank" rel="noopener" class="icon-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                  </path>
-                </svg>
-              </a>
-              <a *ngIf="p.demo" [href]="p.demo" target="_blank" rel="noopener" class="icon-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3>{{ p.title }}</h3>
-          <p>{{ p.desc }}</p>
-          <div class="tags-row">
-            <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
-          </div>
-          <div class="proj-stats">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"
-                stroke="currentColor" stroke-width="1">
-                <polygon
-                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                </polygon>
-              </svg>
-              {{ p.stars }}
-            </span>
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <line x1="6" y1="3" x2="6" y2="15"></line>
-                <circle cx="18" cy="6" r="3"></circle>
-                <circle cx="6" cy="18" r="3"></circle>
-                <path d="M18 9a9 9 0 0 1-9 9"></path>
-              </svg>
-              {{ p.forks }}
-            </span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-
 
 </div>

@@ -84,30 +84,18 @@ export class TranslateService {
 const EN_TRANSLATIONS: Record<string, string> = {
   // Navbar
   'Início': 'Home',
-  'Projetos': 'Projects',
-  'Dicas Dev': 'Dev Tips',
   'Sobre & Lives': 'About & Lives',
-  'Contato': 'Contact',
 
   // Home hero
   'Disponível para novos projetos': 'Available for new projects',
   'Olá, sou o': 'Hi, I\'m',
-  'Ver Projetos': 'View Projects',
 
   // Home quick cards
-  'Apps Flutter': 'Flutter Apps',
-  'Aplicativos Android com Dart': 'Android apps with Dart',
-  'Sites & Landing Pages': 'Sites & Landing Pages',
   'Batalhas no TikTok': 'TikTok Battles',
   'Lives, humor e papo 😂': 'Lives, humor & chat 😂',
   'Meu Instagram': 'My Instagram',
   'Recarregar Coins': 'Recharge Coins',
   'TikTok com desconto': 'TikTok with discount',
-
-  // Home projects
-  'Portfólio': 'Portfolio',
-  'Projetos em destaque': 'Featured Projects',
-  'Ver todos': 'View all',
 
   // Sobre
   'Quem sou eu?': 'Who am I?',
@@ -155,42 +143,6 @@ const EN_TRANSLATIONS: Record<string, string> = {
   // Trajetória
   'Minha Trajetória': 'My Journey',
 
-  // Contato
-  'Vamos': 'Let\'s',
-  'conversar?': 'talk?',
-  'Tem um projeto em mente? Me conta! Desenvolvo apps mobile e sites profissionais com qualidade e prazo.': 'Have a project in mind? Tell me! I develop mobile apps and professional websites with quality and deadline.',
-  'O que eu faço': 'What I do',
-  'Apps Mobile': 'Mobile Apps',
-  'Sites & E-Commerce': 'Sites & E-Commerce',
-  'Chat & Atendimento': 'Chat & Support',
-  'Recursos com IA': 'AI Features',
-  'Enviar mensagem': 'Send message',
-  'Preencha e eu entro em contato em até 24h 🚀': 'Fill in and I\'ll get back to you within 24h 🚀',
-  'Nome': 'Name',
-  'Seu nome': 'Your name',
-  'Assunto': 'Subject',
-  'Mensagem': 'Message',
-  'Tipo de projeto': 'Project type',
-  'App Flutter': 'Flutter App',
-  'Site / Landing Page': 'Site / Landing Page',
-  'Prefere ir direto?': 'Prefer to go direct?',
-  'Fale pelo WhatsApp': 'Chat on WhatsApp',
-  'Mensagem enviada! 🎉': 'Message sent! 🎉',
-  'Enviar outra': 'Send another',
-
-  // Dicas Dev
-  'Dicas & Atalhos': 'Tips & Shortcuts',
-  'Dicas de Programação': 'Programming Tips',
-  'Atalhos do VSCode, dicas de Flutter, Angular e ferramentas que uso no dia a dia. Tudo direto ao ponto, sem enrolação.': 'VSCode shortcuts, Flutter tips, Angular and tools I use daily. Straight to the point.',
-  'Todos': 'All',
-  'Copiar': 'Copy',
-  'Copiado!': 'Copied!',
-
-  // Projetos
-  'Repositórios públicos do GitHub + projetos em destaque. Os privados aparecem na seção de destaques abaixo.': 'Public GitHub repositories + featured projects. Private ones appear in the highlights section below.',
-  'Em destaque': 'Featured',
-  'Buscar repositório...': 'Search repository...',
-
   // Status live
   'VERIFICANDO...': 'CHECKING...',
   'Checando status da live...': 'Checking live status...',
@@ -222,20 +174,13 @@ const EN_TRANSLATIONS: Record<string, string> = {
 const ES_TRANSLATIONS: Record<string, string> = {
   // Navbar
   'Início': 'Inicio',
-  'Projetos': 'Proyectos',
-  'Dicas Dev': 'Tips Dev',
   'Sobre & Lives': 'Sobre & Lives',
-  'Contato': 'Contacto',
 
   // Home hero
   'Disponível para novos projetos': 'Disponible para nuevos proyectos',
   'Olá, sou o': 'Hola, soy',
-  'Ver Projetos': 'Ver Proyectos',
 
   // Home quick cards
-  'Apps Flutter': 'Apps Flutter',
-  'Aplicativos Android com Dart': 'Aplicaciones Android con Dart',
-  'Sites & Landing Pages': 'Sitios & Landing Pages',
   'Batalhas no TikTok': 'Batallas en TikTok',
   'Lives, humor e papo 😂': 'Lives, humor y charla 😂',
   'Meu Instagram': 'Mi Instagram',
@@ -263,35 +208,6 @@ const ES_TRANSLATIONS: Record<string, string> = {
   'Toda semana': 'Toda la semana',
   'PLATAFORMA': 'PLATAFORMA',
 
-  // Contato
-  'Vamos': 'Vamos a',
-  'conversar?': '¿hablar?',
-  'Tem um projeto em mente? Me conta! Desenvolvo apps mobile e sites profissionais com qualidade e prazo.': '¿Tienes un proyecto en mente? ¡Cuéntame! Desarrollo apps móviles y sitios profesionales con calidad y plazo.',
-  'O que eu faço': 'Lo que hago',
-  'Apps Mobile': 'Apps Móviles',
-  'Enviar mensagem': 'Enviar mensaje',
-  'Nome': 'Nombre',
-  'Seu nome': 'Tu nombre',
-  'Assunto': 'Asunto',
-  'Mensagem': 'Mensaje',
-  'Tipo de projeto': 'Tipo de proyecto',
-  'Prefere ir direto?': '¿Prefieres ir directo?',
-  'Fale pelo WhatsApp': 'Habla por WhatsApp',
-  'Mensagem enviada! 🎉': '¡Mensaje enviado! 🎉',
-  'Enviar outra': 'Enviar otro',
-
-  // Dicas Dev
-  'Dicas & Atalhos': 'Tips & Atajos',
-  'Dicas de Programação': 'Tips de Programación',
-  'Todos': 'Todos',
-  'Copiar': 'Copiar',
-  'Copiado!': '¡Copiado!',
-
-  // Projetos
-  'Em destaque': 'Destacados',
-  'Buscar repositório...': 'Buscar repositorio...',
-  'Ver todos': 'Ver todos',
-
   // Trajetória
   'Minha Trajetória': 'Mi Trayectoria',
 
@@ -317,15 +233,9 @@ const ES_TRANSLATIONS: Record<string, string> = {
 
 const FR_TRANSLATIONS: Record<string, string> = {
   'Início': 'Accueil',
-  'Projetos': 'Projets',
-  'Dicas Dev': 'Astuces Dev',
   'Sobre & Lives': 'À propos & Lives',
-  'Contato': 'Contact',
   'Disponível para novos projetos': 'Disponible pour de nouveaux projets',
   'Olá, sou o': 'Salut, je suis',
-  'Ver Projetos': 'Voir Projets',
-  'Apps Flutter': 'Apps Flutter',
-  'Aplicativos Android com Dart': 'Applications Android avec Dart',
   'Batalhas no TikTok': 'Batailles sur TikTok',
   'Lives, humor e papo 😂': 'Lives, humour et discussion 😂',
   'Meu Instagram': 'Mon Instagram',
@@ -342,18 +252,6 @@ const FR_TRANSLATIONS: Record<string, string> = {
   'OFFLINE': 'HORS LIGNE',
   'Não estou em live agora. Siga pra ser notificado! 🔔': 'Pas en live maintenant. Suivez pour être notifié ! 🔔',
   'Estou online no TikTok! Vem assistir 🔥': 'Je suis en direct sur TikTok ! Venez regarder 🔥',
-  'Vamos': 'On',
-  'conversar?': 'discute ?',
-  'Enviar mensagem': 'Envoyer message',
-  'Nome': 'Nom',
-  'Seu nome': 'Votre nom',
-  'Assunto': 'Sujet',
-  'Mensagem': 'Message',
-  'Todos': 'Tous',
-  'Copiar': 'Copier',
-  'Copiado!': 'Copié !',
-  'Em destaque': 'En vedette',
-  'Ver todos': 'Voir tout',
   'Minha Trajetória': 'Mon Parcours',
   'VERIFICANDO...': 'VÉRIFICATION...',
   'Checando status da live...': 'Vérification du statut...',
@@ -376,15 +274,9 @@ const FR_TRANSLATIONS: Record<string, string> = {
 
 const AR_TRANSLATIONS: Record<string, string> = {
   'Início': 'الرئيسية',
-  'Projetos': 'المشاريع',
-  'Dicas Dev': 'نصائح برمجة',
   'Sobre & Lives': 'عني والبث',
-  'Contato': 'اتصل بي',
   'Disponível para novos projetos': 'متاح لمشاريع جديدة',
   'Olá, sou o': 'مرحباً، أنا',
-  'Ver Projetos': 'عرض المشاريع',
-  'Apps Flutter': 'تطبيقات Flutter',
-  'Aplicativos Android com Dart': 'تطبيقات أندرويد بلغة Dart',
   'Batalhas no TikTok': 'معارك على TikTok',
   'Lives, humor e papo 😂': 'بث مباشر، فكاهة ودردشة 😂',
   'Meu Instagram': 'إنستغرامي',
@@ -401,18 +293,6 @@ const AR_TRANSLATIONS: Record<string, string> = {
   'OFFLINE': 'غير متصل',
   'Não estou em live agora. Siga pra ser notificado! 🔔': 'لست في بث مباشر الآن. تابعني للإشعارات! 🔔',
   'Estou online no TikTok! Vem assistir 🔥': 'أنا مباشر على TikTok! تعال شاهد 🔥',
-  'Vamos': 'هيا',
-  'conversar?': 'نتحدث؟',
-  'Enviar mensagem': 'إرسال رسالة',
-  'Nome': 'الاسم',
-  'Seu nome': 'اسمك',
-  'Assunto': 'الموضوع',
-  'Mensagem': 'الرسالة',
-  'Todos': 'الكل',
-  'Copiar': 'نسخ',
-  'Copiado!': 'تم النسخ!',
-  'Em destaque': 'مميز',
-  'Ver todos': 'عرض الكل',
   'Minha Trajetória': 'مسيرتي',
   'VERIFICANDO...': 'جاري التحقق...',
   'Checando status da live...': 'التحقق من حالة البث...',

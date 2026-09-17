@@ -27,6 +27,13 @@
     </ul>
 
     <div class="navbar__actions">
+      <!-- Vakinha -->
+      <a [href]="vakinhaUrl" target="_blank" rel="noopener noreferrer" class="navbar__vakinha"
+        title="Ajude minha vaquinha">
+        <span class="nav-icon" [innerHTML]="getIcon('heart')"></span>
+        {{ 'Vakinha' | translate }}
+      </a>
+
       <!-- Language selector -->
       <div class="lang-selector" (click)="toggleLang()">
         <img class="lang-selector__flag" [src]="getCurrentFlag()" alt="Language" />
@@ -77,6 +84,12 @@
           <span *ngIf="link.badge.type === 'red'" class="glow-dot"></span>
           {{ link.badge.text }}
         </span>
+      </a>
+    </li>
+    <li>
+      <a [href]="vakinhaUrl" target="_blank" rel="noopener noreferrer" class="mobile-link mobile-link--vakinha">
+        <span class="nav-icon" [innerHTML]="getIcon('heart')"></span>
+        {{ 'Vakinha' | translate }}
       </a>
     </li>
   </ul>
