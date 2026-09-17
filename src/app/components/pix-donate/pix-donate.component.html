@@ -1,0 +1,41 @@
+<div class="pix-card card">
+  <div class="pix-card__badge">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2 2 7v10l10 5 10-5V7z"></path>
+      <path d="m2 7 10 5 10-5"></path>
+      <path d="M12 22V12"></path>
+    </svg>
+    PIX
+  </div>
+
+  <h2 class="pix-card__title">{{ 'Faça um Pix 💚' | translate }}</h2>
+  <p class="pix-card__sub">
+    {{ 'Curte o conteúdo? Manda um Pix de qualquer valor e ajuda a manter as lives no ar! 🎙️' | translate }}
+  </p>
+
+  <div class="pix-card__qr" *ngIf="qrDataUrl">
+    <img [src]="qrDataUrl" alt="QR Code Pix — Anselmo Polcaro" />
+  </div>
+
+  <div class="pix-card__key">
+    <span class="pix-card__key-label">{{ 'Chave Pix (aleatória)' | translate }}</span>
+    <code class="pix-card__key-value">{{ pix.chave }}</code>
+  </div>
+
+  <div class="pix-card__actions">
+    <button type="button" class="btn btn-pix" (click)="copy('codigo')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+      {{ copied === 'codigo' ? ('Copiado! ✅' | translate) : ('Copiar código Pix' | translate) }}
+    </button>
+    <button type="button" class="btn btn-pix-ghost" (click)="copy('chave')">
+      {{ copied === 'chave' ? ('Copiado! ✅' | translate) : ('Copiar chave' | translate) }}
+    </button>
+  </div>
+
+  <p class="pix-card__hint">{{ 'Abra o app do seu banco → Pix → Ler QR Code ou Pix Copia e Cola.' | translate }}</p>
+</div>

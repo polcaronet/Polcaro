@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TiktokEmbedComponent } from './components/tiktok-embed/tiktok-embed.component';
+import { PixDonateComponent } from './components/pix-donate/pix-donate.component';
 import { LivesComponent } from './pages/lives/lives.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { PrivacidadeComponent } from './pages/privacidade/privacidade.component';
@@ -16,7 +17,7 @@ import { GaleriaComponent } from './pages/galeria/galeria.component';
 @NgModule({
   declarations: [
     AppComponent, NavbarComponent, SafeUrlPipe, TranslatePipe,
-    TiktokEmbedComponent,
+    TiktokEmbedComponent, PixDonateComponent,
     LivesComponent,
     SobreComponent,
     PrivacidadeComponent, TermosComponent, GaleriaComponent,
