@@ -108,11 +108,40 @@
   }
 }
 
-.sobre-role {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  color: var(--accent-primary);
+.sobre-typing {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
   margin-bottom: 24px;
+}
+
+.typing-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.typing-cursor {
+  font-family: var(--font-mono);
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  color: var(--accent-primary);
+  animation: blink 0.8s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .mono {
@@ -2024,8 +2053,9 @@
     padding: 5px 12px;
   }
 
-  .sobre-role {
-    font-size: 0.8rem;
+  .sobre-typing .typing-text,
+  .sobre-typing .typing-cursor {
+    font-size: 0.9rem;
   }
 
   .icon-links-row {
@@ -2187,8 +2217,9 @@
     height: 80px;
   }
 
-  .sobre-role {
-    font-size: 0.72rem;
+  .sobre-typing .typing-text,
+  .sobre-typing .typing-cursor {
+    font-size: 0.8rem;
   }
 
   .icon-links-row {

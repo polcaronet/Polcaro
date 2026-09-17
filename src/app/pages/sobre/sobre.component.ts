@@ -22,6 +22,23 @@ export class SobreComponent implements OnInit, OnDestroy {
 
   private statusSub$!: Subscription;
 
+  // Typing animation
+  readonly typingLines = [
+    'Meu nome é Anselmo Polcaro 🧑',
+    'Sou Streamer de Sucesso ✨',
+    'Faço conteúdos de humor 😂',
+    'Faço batalhas no TikTok ⚔️',
+    'Lives toda noite 🎙️',
+    'Bate-papo com a galera 💬',
+    'Às vezes solto a voz 🎵',
+    'Busco boas amizades 🤝',
+  ];
+  typedText = '';
+  private lineIndex = 0;
+  private charIndex = 0;
+  private isDeleting = false;
+  private typeTimer: ReturnType<typeof setTimeout> | null = null;
+
   constructor(
     private data: DataService,
     private liveStatus: LiveStatusService,
@@ -30,6 +47,7 @@ export class SobreComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.timeline = this.data.timeline;
+    this.type();
 
     // Inicia polling e escuta mudanças de status
     this.liveStatus.startPolling();
@@ -55,6 +73,38 @@ export class SobreComponent implements OnInit, OnDestroy {
     if (this.statusSub$) {
       this.statusSub$.unsubscribe();
     }
+    if (this.typeTimer) {
+      clearTimeout(this.typeTimer);
+    }
+  }
+
+  private type(): void {
+    const currentLine = this.typingLines[this.lineIndex];
+    const speed = this.isDeleting ? 30 : 70;
+
+    if (!this.isDeleting) {
+      this.typedText = currentLine.substring(0, this.charIndex + 1);
+      this.charIndex++;
+
+      if (this.charIndex === currentLine.length) {
+        // Pausa antes de deletar
+        this.typeTimer = setTimeout(() => {
+          this.isDeleting = true;
+          this.type();
+        }, 2000);
+        return;
+      }
+    } else {
+      this.typedText = currentLine.substring(0, this.charIndex - 1);
+      this.charIndex--;
+
+      if (this.charIndex === 0) {
+        this.isDeleting = false;
+        this.lineIndex = (this.lineIndex + 1) % this.typingLines.length;
+      }
+    }
+
+    this.typeTimer = setTimeout(() => this.type(), speed);
   }
 
   private updateStatus(status: LiveStatus): void {

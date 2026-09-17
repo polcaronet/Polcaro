@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TiktokEmbedComponent } from './components/tiktok-embed/tiktok-embed.component';
-import { HomeComponent } from './pages/home/home.component';
 import { LivesComponent } from './pages/lives/lives.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { PrivacidadeComponent } from './pages/privacidade/privacidade.component';
@@ -18,7 +17,7 @@ import { GaleriaComponent } from './pages/galeria/galeria.component';
   declarations: [
     AppComponent, NavbarComponent, SafeUrlPipe, TranslatePipe,
     TiktokEmbedComponent,
-    HomeComponent, LivesComponent,
+    LivesComponent,
     SobreComponent,
     PrivacidadeComponent, TermosComponent, GaleriaComponent,
   ],

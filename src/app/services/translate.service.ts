@@ -83,19 +83,7 @@ export class TranslateService {
 
 const EN_TRANSLATIONS: Record<string, string> = {
   // Navbar
-  'Início': 'Home',
   'Sobre & Lives': 'About & Lives',
-
-  // Home hero
-  'Disponível para novos projetos': 'Available for new projects',
-  'Olá, sou o': 'Hi, I\'m',
-
-  // Home quick cards
-  'Batalhas no TikTok': 'TikTok Battles',
-  'Lives, humor e papo 😂': 'Lives, humor & chat 😂',
-  'Meu Instagram': 'My Instagram',
-  'Recarregar Coins': 'Recharge Coins',
-  'TikTok com desconto': 'TikTok with discount',
 
   // Sobre
   'Quem sou eu?': 'Who am I?',
@@ -173,19 +161,7 @@ const EN_TRANSLATIONS: Record<string, string> = {
 
 const ES_TRANSLATIONS: Record<string, string> = {
   // Navbar
-  'Início': 'Inicio',
   'Sobre & Lives': 'Sobre & Lives',
-
-  // Home hero
-  'Disponível para novos projetos': 'Disponible para nuevos proyectos',
-  'Olá, sou o': 'Hola, soy',
-
-  // Home quick cards
-  'Batalhas no TikTok': 'Batallas en TikTok',
-  'Lives, humor e papo 😂': 'Lives, humor y charla 😂',
-  'Meu Instagram': 'Mi Instagram',
-  'Recarregar Coins': 'Recargar Coins',
-  'TikTok com desconto': 'TikTok con descuento',
 
   // Sobre
   'Quem sou eu?': '¿Quién soy?',
@@ -232,15 +208,7 @@ const ES_TRANSLATIONS: Record<string, string> = {
 };
 
 const FR_TRANSLATIONS: Record<string, string> = {
-  'Início': 'Accueil',
   'Sobre & Lives': 'À propos & Lives',
-  'Disponível para novos projetos': 'Disponible pour de nouveaux projets',
-  'Olá, sou o': 'Salut, je suis',
-  'Batalhas no TikTok': 'Batailles sur TikTok',
-  'Lives, humor e papo 😂': 'Lives, humour et discussion 😂',
-  'Meu Instagram': 'Mon Instagram',
-  'Recarregar Coins': 'Recharger Coins',
-  'TikTok com desconto': 'TikTok avec réduction',
   'Quem sou eu?': 'Qui suis-je ?',
   'Lives & Batalhas': 'Lives & Batailles',
   'Toda noite tem live! Batalhas, bate-papo, brincadeiras e às vezes um canto.': 'Tous les soirs il y a un live ! Batailles, discussion, jeux et parfois du chant.',
@@ -273,15 +241,7 @@ const FR_TRANSLATIONS: Record<string, string> = {
 };
 
 const AR_TRANSLATIONS: Record<string, string> = {
-  'Início': 'الرئيسية',
   'Sobre & Lives': 'عني والبث',
-  'Disponível para novos projetos': 'متاح لمشاريع جديدة',
-  'Olá, sou o': 'مرحباً، أنا',
-  'Batalhas no TikTok': 'معارك على TikTok',
-  'Lives, humor e papo 😂': 'بث مباشر، فكاهة ودردشة 😂',
-  'Meu Instagram': 'إنستغرامي',
-  'Recarregar Coins': 'شحن العملات',
-  'TikTok com desconto': 'TikTok بخصم',
   'Quem sou eu?': 'من أنا؟',
   'Lives & Batalhas': 'البث والمعارك',
   'Toda noite tem live! Batalhas, bate-papo, brincadeiras e às vezes um canto.': 'كل ليلة هناك بث مباشر! معارك، دردشة، ألعاب وأحياناً غناء.',

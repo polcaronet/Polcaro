@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { PrivacidadeComponent } from './pages/privacidade/privacidade.component';
 import { TermosComponent } from './pages/termos/termos.component';
@@ -9,7 +8,7 @@ import { GaleriaComponent } from './pages/galeria/galeria.component';
 
 const routes: Routes = [
   { path: '', component: SobreComponent },
-  { path: 'inicio', component: HomeComponent },
+  { path: 'inicio', redirectTo: '' },
   { path: 'lives', redirectTo: 'sobre' },
   { path: 'sobre', redirectTo: '' },
   { path: 'galeria', component: GaleriaComponent },
