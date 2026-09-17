@@ -17,6 +17,7 @@ export class SobreComponent implements OnInit, OnDestroy {
   // Streamer status
   isLive = false;
   viewerCount = 0;
+  liveUsername = 'anselmopolcaro';
   statusText = 'VERIFICANDO...';
   statusSub = 'Checando status da live...';
 
@@ -110,6 +111,9 @@ export class SobreComponent implements OnInit, OnDestroy {
   private updateStatus(status: LiveStatus): void {
     this.isLive = status.isLive;
     this.viewerCount = status.viewerCount;
+    if (status.username) {
+      this.liveUsername = status.username;
+    }
 
     if (status.isLive) {
       this.statusText = this.translate.t('AO VIVO AGORA');

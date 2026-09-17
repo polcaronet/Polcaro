@@ -56,7 +56,7 @@
             <span class="streamer-status__label" [class.streamer-status__label--live]="isLive">{{ statusText }}</span>
             <span class="streamer-status__sub">{{ statusSub }}</span>
           </div>
-          <a *ngIf="isLive" href="https://www.tiktok.com/@anselmopolcaro/live" target="_blank" rel="noopener"
+          <a *ngIf="isLive" [href]="'https://www.tiktok.com/@' + liveUsername + '/live'" target="_blank" rel="noopener"
             class="streamer-status__btn streamer-status__btn--live">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2.5">

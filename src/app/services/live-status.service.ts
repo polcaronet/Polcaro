@@ -1,11 +1,18 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
+export interface ProfileStatus {
+  username: string;
+  isLive: boolean;
+  viewerCount: number;
+}
+
 export interface LiveStatus {
   isLive: boolean;
   username: string;
   viewerCount: number;
   checkedAt: string;
+  profiles?: ProfileStatus[];
 }
 
 @Injectable({ providedIn: 'root' })
