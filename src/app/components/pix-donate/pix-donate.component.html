@@ -1,7 +1,7 @@
 <div class="pix-card card">
   <div class="pix-card__badge">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 2 2 7v10l10 5 10-5V7z"></path>
       <path d="m2 7 10 5 10-5"></path>
       <path d="M12 22V12"></path>
@@ -13,6 +13,13 @@
   <p class="pix-card__sub">
     {{ 'Curte o conteúdo? Manda um Pix de qualquer valor e ajuda a manter as lives no ar! 🎙️' | translate }}
   </p>
+
+  <div class="pix-card__values">
+    <button type="button" *ngFor="let v of presets" class="pix-value" [class.pix-value--active]="selectedValue === v"
+      (click)="selectValue(v)">
+      {{ label(v) | translate }}
+    </button>
+  </div>
 
   <div class="pix-card__qr" *ngIf="qrDataUrl">
     <img [src]="qrDataUrl" alt="QR Code Pix — Anselmo Polcaro" />

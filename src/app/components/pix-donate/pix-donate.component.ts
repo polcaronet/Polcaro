@@ -12,10 +12,24 @@ export class PixDonateComponent implements OnInit {
   payload = '';
   copied: 'chave' | 'codigo' | null = null;
 
+  /** Valores sugeridos (em reais). null = valor livre (pagador escolhe). */
+  readonly presets: (number | null)[] = [null, 5, 10, 20, 50];
+  selectedValue: number | null = null;
+
   constructor(public pix: PixService) { }
 
   async ngOnInit(): Promise<void> {
-    this.payload = this.pix.buildPayload();
+    await this.generate();
+  }
+
+  async selectValue(value: number | null): Promise<void> {
+    this.selectedValue = value;
+    await this.generate();
+  }
+
+  private async generate(): Promise<void> {
+    const valor = this.selectedValue ?? undefined;
+    this.payload = this.pix.buildPayload(valor, 'Apoio lives Anselmo Polcaro');
     try {
       this.qrDataUrl = await QRCode.toDataURL(this.payload, {
         width: 320,
@@ -26,6 +40,10 @@ export class PixDonateComponent implements OnInit {
     } catch {
       this.qrDataUrl = '';
     }
+  }
+
+  label(value: number | null): string {
+    return value === null ? 'Livre' : `R$ ${value}`;
   }
 
   async copy(what: 'chave' | 'codigo'): Promise<void> {

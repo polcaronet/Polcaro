@@ -27,6 +27,12 @@
     </ul>
 
     <div class="navbar__actions">
+      <!-- Pix -->
+      <a routerLink="/" fragment="pix" class="navbar__pix" title="Faça um Pix">
+        <span class="nav-icon" [innerHTML]="getIcon('pix')"></span>
+        {{ 'Pix' | translate }}
+      </a>
+
       <!-- Vakinha -->
       <a [href]="vakinhaUrl" target="_blank" rel="noopener noreferrer" class="navbar__vakinha"
         title="Ajude minha vaquinha">
@@ -84,6 +90,12 @@
           <span *ngIf="link.badge.type === 'red'" class="glow-dot"></span>
           {{ link.badge.text }}
         </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="pix" class="mobile-link mobile-link--pix">
+        <span class="nav-icon" [innerHTML]="getIcon('pix')"></span>
+        {{ 'Pix' | translate }}
       </a>
     </li>
     <li>
