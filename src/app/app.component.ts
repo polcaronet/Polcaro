@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
         <div class="footer-avatar-row">
           <div class="footer-avatar-wrap">
             <img
-              src="/assets/eu_dev.png"
+              src="/assets/eu_cavalheiro.jpeg"
               alt="Anselmo Polcaro"
               class="footer-avatar"
               onerror="this.src='https://ui-avatars.com/api/?name=Anselmo+Polcaro&background=6c63ff&color=fff&size=80'"
@@ -21,14 +21,14 @@ import { Component } from '@angular/core';
           </div>
           <div class="footer-info">
             <div class="footer-credit">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="16" height="16" />
-              <span class="footer-text">{{ 'Feito com Flutter & Angular por' | translate }}</span>
+              <span style="font-size:1rem">🎙️</span>
+              <span class="footer-text">{{ 'Streamer no TikTok' | translate }}</span>
               <span class="gold-name">Anselmo Polcaro</span>
             </div>
             <p class="footer-tagline">
-              {{ 'Anselmo Polcaro, brasileiro, apaixonado por desenvolvimento de Apps em Flutter com Dart.' | translate }}
+              {{ 'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.' | translate }}
               <span class="footer-bio-extra" [class.footer-bio-extra--visible]="bioOpen">
-                {{ 'Atualmente focado em Aplicativos Mobile e E-Commerce em geral. Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂' | translate }}
+                {{ 'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂' | translate }}
               </span>
             </p>
             <button class="footer-expand-btn" (click)="bioOpen = !bioOpen">

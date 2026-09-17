@@ -148,15 +148,13 @@ const EN_TRANSLATIONS: Record<string, string> = {
   'assistindo agora 🔥': 'watching now 🔥',
 
   // Footer
-  'Feito com Flutter & Angular por': 'Made with Flutter & Angular by',
+  'Streamer no TikTok': 'Streamer on TikTok',
   'Ler mais': 'Read more',
   'Ocultar': 'Hide',
   'Política de Privacidade': 'Privacy Policy',
   'Termos de Uso': 'Terms of Use',
-  'Descreva brevemente seu projeto': 'Briefly describe your project',
-  'Conta mais sobre o projeto, prazo e orçamento...': 'Tell me more about the project, deadline and budget...',
-  'Anselmo Polcaro, brasileiro, apaixonado por desenvolvimento de Apps em Flutter com Dart.': 'Anselmo Polcaro, Brazilian, passionate about developing Apps in Flutter with Dart.',
-  'Atualmente focado em Aplicativos Mobile e E-Commerce em geral. Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂': 'Currently focused on Mobile Apps and E-Commerce in general. In my free time, I do voice acting and humor on TikTok 🎙️😂',
+  'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'Anselmo Polcaro, Brazilian, streamer on TikTok @anselmopolcaro.',
+  'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'Lives every night: battles, humor, chat and sometimes singing. Come join the crew! 🎙️😂',
 };
 
 const ES_TRANSLATIONS: Record<string, string> = {
@@ -196,15 +194,13 @@ const ES_TRANSLATIONS: Record<string, string> = {
   'Coins': 'Coins',
   'Galeria de Arte': 'Galería de Arte',
   '👉 Recarregar 👈': '👉 Recargar 👈',
-  'Feito com Flutter & Angular por': 'Hecho con Flutter & Angular por',
+  'Streamer no TikTok': 'Streamer en TikTok',
   'Ler mais': 'Leer más',
   'Ocultar': 'Ocultar',
   'Política de Privacidade': 'Política de Privacidad',
   'Termos de Uso': 'Términos de Uso',
-  'Descreva brevemente seu projeto': 'Describe brevemente tu proyecto',
-  'Conta mais sobre o projeto, prazo e orçamento...': 'Cuéntame más sobre el proyecto, plazo y presupuesto...',
-  'Anselmo Polcaro, brasileiro, apaixonado por desenvolvimento de Apps em Flutter com Dart.': 'Anselmo Polcaro, brasileño, apasionado por el desarrollo de Apps en Flutter con Dart.',
-  'Atualmente focado em Aplicativos Mobile e E-Commerce em geral. Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂': 'Actualmente enfocado en Aplicaciones Mobile y E-Commerce. En mi tiempo libre, hago doblajes y humor en TikTok 🎙️😂',
+  'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'Anselmo Polcaro, brasileño, streamer en TikTok @anselmopolcaro.',
+  'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'Lives todas las noches: batallas, humor, charla y a veces canto. ¡Ven a ser parte del grupo! 🎙️😂',
 };
 
 const FR_TRANSLATIONS: Record<string, string> = {
@@ -229,15 +225,13 @@ const FR_TRANSLATIONS: Record<string, string> = {
   'Coins': 'Coins',
   'Galeria de Arte': 'Galerie d\'Art',
   '👉 Recarregar 👈': '👉 Recharger 👈',
-  'Feito com Flutter & Angular por': 'Fait avec Flutter & Angular par',
+  'Streamer no TikTok': 'Streamer sur TikTok',
   'Ler mais': 'Lire plus',
   'Ocultar': 'Masquer',
   'Política de Privacidade': 'Politique de Confidentialité',
   'Termos de Uso': 'Conditions d\'Utilisation',
-  'Descreva brevemente seu projeto': 'Décrivez brièvement votre projet',
-  'Conta mais sobre o projeto, prazo e orçamento...': 'Dites-moi plus sur le projet, délai et budget...',
-  'Anselmo Polcaro, brasileiro, apaixonado por desenvolvimento de Apps em Flutter com Dart.': 'Anselmo Polcaro, brésilien, passionné par le développement d\'Apps en Flutter avec Dart.',
-  'Atualmente focado em Aplicativos Mobile e E-Commerce em geral. Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂': 'Actuellement concentré sur les Apps Mobile et E-Commerce. Pendant mon temps libre, je fais du doublage et de l\'humour sur TikTok 🎙️😂',
+  'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'Anselmo Polcaro, brésilien, streamer sur TikTok @anselmopolcaro.',
+  'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'Lives tous les soirs : batailles, humour, discussion et parfois du chant. Venez faire partie du groupe ! 🎙️😂',
 };
 
 const AR_TRANSLATIONS: Record<string, string> = {
@@ -262,13 +256,11 @@ const AR_TRANSLATIONS: Record<string, string> = {
   'Coins': 'عملات',
   'Galeria de Arte': 'معرض الفن',
   '👉 Recarregar 👈': '👉 شحن 👈',
-  'Feito com Flutter & Angular por': 'صنع بـ Flutter & Angular بواسطة',
+  'Streamer no TikTok': 'ستريمر على TikTok',
   'Ler mais': 'اقرأ المزيد',
   'Ocultar': 'إخفاء',
   'Política de Privacidade': 'سياسة الخصوصية',
   'Termos de Uso': 'شروط الاستخدام',
-  'Descreva brevemente seu projeto': 'صف مشروعك باختصار',
-  'Conta mais sobre o projeto, prazo e orçamento...': 'أخبرني المزيد عن المشروع والموعد والميزانية...',
-  'Anselmo Polcaro, brasileiro, apaixonado por desenvolvimento de Apps em Flutter com Dart.': 'أنسيلمو بولكارو، برازيلي، شغوف بتطوير التطبيقات بـ Flutter مع Dart.',
-  'Atualmente focado em Aplicativos Mobile e E-Commerce em geral. Nas horas vagas, faço dublagens e humor no TikTok 🎙️😂': 'حالياً أركز على تطبيقات الموبايل والتجارة الإلكترونية. في وقت فراغي، أقوم بالدبلجة والفكاهة على TikTok 🎙️😂',
+  'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'أنسيلمو بولكارو، برازيلي، ستريمر على TikTok @anselmopolcaro.',
+  'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'بث مباشر كل ليلة: معارك، فكاهة، دردشة وأحياناً غناء. انضم إلى المجموعة! 🎙️😂',
 };
