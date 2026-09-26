@@ -126,6 +126,36 @@ export class SobreComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Compartilhar o link da live (previa com imagem no WhatsApp)
+  readonly liveShareUrl = 'https://polcaronet.com.br/live';
+  shareCopied = false;
+
+  async shareLive(): Promise<void> {
+    const shareData = {
+      title: 'Anselmo Polcaro | Live no TikTok',
+      text: 'Vem pra minha live no TikTok! ⚔️🎙️',
+      url: this.liveShareUrl,
+    };
+    // Em celulares, abre o menu nativo de compartilhamento
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch {
+        // usuario cancelou ou nao suportado -> cai no copiar
+      }
+    }
+    // Fallback: copia o link para a area de transferencia
+    try {
+      await navigator.clipboard.writeText(this.liveShareUrl);
+      this.shareCopied = true;
+      setTimeout(() => (this.shareCopied = false), 2500);
+    } catch {
+      // ultimo recurso: seleciona via prompt
+      window.prompt('Copie o link da live:', this.liveShareUrl);
+    }
+  }
+
   toggleBio(): void {
     this.bioExpanded = !this.bioExpanded;
   }

@@ -292,6 +292,17 @@ canvas {
     }
   }
 
+  &-share {
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+
+    &:hover {
+      background: #1fbe5a;
+      transform: translateY(-2px);
+    }
+  }
+
   &-sm {
     padding: 8px 16px;
     font-size: 0.8rem;
