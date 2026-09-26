@@ -154,12 +154,13 @@ ${redirectTags}
 </body>
 </html>`;
 
-  // Sem cache agressivo: o alvo muda conforme entra/sai da live.
-  // s-maxage curto ajuda o WhatsApp a re-buscar a imagem sem ficar preso ao alvo antigo.
+  // Nao cachear na CDN: a resposta muda por user-agent (crawler vs visitante)
+  // e conforme entra/sai da live. Vary garante que caches respeitem o user-agent.
   const buffer = Buffer.from(body, 'utf-8');
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.setHeader('Content-Length', buffer.length);
-  res.setHeader('Cache-Control', 's-maxage=15, stale-while-revalidate=30');
+  res.setHeader('Cache-Control', 'no-store, must-revalidate');
+  res.setHeader('Vary', 'User-Agent');
   res.statusCode = 200;
   res.end(buffer);
 };
