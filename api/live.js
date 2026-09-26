@@ -74,7 +74,17 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+// Detecta crawlers de redes sociais (que geram a previa do link).
+// Para esses, NAO redirecionamos — servimos so as metatags para a previa aparecer.
+function isCrawler(ua) {
+  if (!ua) return false;
+  return /facebookexternalhit|facebot|WhatsApp|Twitterbot|TelegramBot|LinkedInBot|Slackbot|Discordbot|Pinterest|redditbot|Googlebot|bingbot|Applebot|SkypeUriPreview|vkShare|W3C_Validator|embedly|Iframely|Google-InspectionTool/i.test(ua);
+}
+
 module.exports = async (req, res) => {
+  const userAgent = (req.headers['user-agent'] || '');
+  const crawler = isCrawler(userAgent);
+
   let liveUser = null;
   try {
     const results = await Promise.all(USERNAMES.map((u) => checkUser(u)));
@@ -98,6 +108,12 @@ module.exports = async (req, res) => {
     : 'Lives todas as noites no TikTok: batalhas, humor, bate-papo e muita diversão. Vem fazer parte da galera!';
 
   const safeTarget = escapeHtml(target);
+
+  // Redirect só para visitantes reais. Crawlers recebem só as metatags (previa).
+  const redirectTags = crawler
+    ? ''
+    : `<meta http-equiv="refresh" content="0; url=${safeTarget}">
+<script>window.location.replace(${JSON.stringify(target)});</script>`;
 
   const body = `<!doctype html>
 <html lang="pt-BR">
@@ -123,8 +139,7 @@ module.exports = async (req, res) => {
 <meta name="twitter:description" content="${escapeHtml(description)}">
 <meta name="twitter:image" content="${OG_IMAGE}">
 
-<meta http-equiv="refresh" content="0; url=${safeTarget}">
-<script>window.location.replace(${JSON.stringify(target)});</script>
+${redirectTags}
 <style>
   body{margin:0;background:#000;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
        display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:1rem;}
