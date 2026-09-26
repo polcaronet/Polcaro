@@ -106,7 +106,6 @@ module.exports = async (req, res) => {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(title)}</title>
 <link rel="canonical" href="${SITE}/live">
-<meta name="robots" content="noindex, follow">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="${SITE}/live">
@@ -142,7 +141,10 @@ module.exports = async (req, res) => {
 
   // Sem cache agressivo: o alvo muda conforme entra/sai da live.
   // s-maxage curto ajuda o WhatsApp a re-buscar a imagem sem ficar preso ao alvo antigo.
+  const buffer = Buffer.from(body, 'utf-8');
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.setHeader('Content-Length', buffer.length);
   res.setHeader('Cache-Control', 's-maxage=15, stale-while-revalidate=30');
-  res.status(200).send(body);
+  res.statusCode = 200;
+  res.end(buffer);
 };
