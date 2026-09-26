@@ -33,7 +33,11 @@
       "destination": "/api/$1"
     },
     {
-      "source": "/((?!sitemap\\.xml|robots\\.txt|assets|favicon\\.ico).*)",
+      "source": "/live",
+      "destination": "/api/live"
+    },
+    {
+      "source": "/((?!sitemap\\.xml|robots\\.txt|assets|favicon\\.ico|live|api).*)",
       "destination": "/index.html"
     }
   ]
