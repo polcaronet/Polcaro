@@ -131,15 +131,11 @@ export class SobreComponent implements OnInit, OnDestroy {
   shareCopied = false;
 
   async shareLive(): Promise<void> {
-    const shareData = {
-      title: 'Anselmo Polcaro | Live no TikTok',
-      text: 'Vem pra minha live no TikTok! ⚔️🎙️',
-      url: this.liveShareUrl,
-    };
-    // Em celulares, abre o menu nativo de compartilhamento
+    // IMPORTANTE: compartilhar SOMENTE a URL (sem "text"), senao o WhatsApp trata
+    // como mensagem de texto e nao gera a previa do link com a imagem.
     if (navigator.share) {
       try {
-        await navigator.share(shareData);
+        await navigator.share({ url: this.liveShareUrl });
         return;
       } catch {
         // usuario cancelou ou nao suportado -> cai no copiar
