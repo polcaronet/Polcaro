@@ -126,9 +126,9 @@ export class SobreComponent implements OnInit, OnDestroy {
     }
   }
 
-  // Compartilhar o link do site (previa com imagem no WhatsApp).
-  // Usamos a home (raiz) porque e a URL com previa mais confiavel para o robo do WhatsApp.
-  readonly liveShareUrl = 'https://polcaronet.com.br/';
+  // Compartilhar o link da live. /live e servido por uma funcao serverless (api/live.js)
+  // que mostra a previa com a foto no WhatsApp E redireciona o visitante para a live do TikTok.
+  readonly liveShareUrl = 'https://polcaronet.com.br/live';
   shareCopied = false;
 
   async shareLive(): Promise<void> {
