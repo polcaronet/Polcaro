@@ -96,7 +96,7 @@ export class NavbarComponent implements OnInit {
     const shareData = {
       title: 'Anselmo Polcaro | Streamer no TikTok',
       text: 'Vem acompanhar as lives do Anselmo Polcaro no TikTok! 🎙️',
-      url: 'https://polcaronet.com.br/',
+      url: 'https://www.polcaronet.com.br/',
     };
 
     if (navigator.share) {

@@ -7,7 +7,7 @@
 //   - Pessoas reais são redirecionadas na hora para a live.
 
 const USERNAMES = ['anselmopolcaro', 'polcaro39'];
-const SITE = 'https://polcaronet.com.br';
+const SITE = 'https://www.polcaronet.com.br';
 const OG_IMAGE = `${SITE}/assets/og-cavalheiro-wide.jpg`;
 
 async function checkUser(username) {
