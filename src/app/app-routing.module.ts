@@ -5,6 +5,7 @@ import { PrivacidadeComponent } from './pages/privacidade/privacidade.component'
 import { TermosComponent } from './pages/termos/termos.component';
 
 import { GaleriaComponent } from './pages/galeria/galeria.component';
+import { DesenvolvedorComponent } from './pages/desenvolvedor/desenvolvedor.component';
 
 const routes: Routes = [
   { path: '', component: SobreComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'lives', redirectTo: 'sobre' },
   { path: 'sobre', redirectTo: '' },
   { path: 'galeria', component: GaleriaComponent },
+  { path: 'desenvolvedor', component: DesenvolvedorComponent },
   { path: 'privacidade', component: PrivacidadeComponent },
   { path: 'termos', component: TermosComponent },
   { path: '**', redirectTo: '' },

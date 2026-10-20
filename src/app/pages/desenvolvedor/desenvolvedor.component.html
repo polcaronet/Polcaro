@@ -1,0 +1,111 @@
+<div class="page">
+
+  <!-- Hero -->
+  <section class="dev-hero">
+    <div class="dev-hero__bg">
+      <div class="dev-hero__orb dev-hero__orb--1"></div>
+      <div class="dev-hero__orb dev-hero__orb--2"></div>
+    </div>
+    <div class="container dev-hero__content">
+      <div class="dev-badge">
+        <span>💻</span> {{ 'DESENVOLVEDOR' | translate }}
+      </div>
+      <h1 class="dev-hero__title">{{ 'Apps em Flutter & Dart' | translate }}</h1>
+      <p class="dev-hero__sub">
+        {{ 'Desenvolvo aplicativos mobile para Android. Estudo e crio soluções sob medida para o seu negócio ou ideia.'
+        | translate }}
+      </p>
+
+      <div class="dev-stack">
+        <span class="dev-chip" *ngFor="let s of stack">{{ s }}</span>
+      </div>
+
+      <!-- Navegação rápida: clique para abrir a seção -->
+      <nav class="dev-nav">
+        <button type="button" class="dev-nav__btn" [class.dev-nav__btn--active]="activeSection === 'servicos'"
+          (click)="openSection('servicos')">
+          <span class="dev-nav__emoji">⚙️</span> {{ 'Serviços' | translate }}
+        </button>
+        <button type="button" class="dev-nav__btn" [class.dev-nav__btn--active]="activeSection === 'planos'"
+          (click)="openSection('planos')">
+          <span class="dev-nav__emoji">💰</span> {{ 'Planos & Preços' | translate }}
+        </button>
+        <button type="button" class="dev-nav__btn" [class.dev-nav__btn--active]="activeSection === 'processo'"
+          (click)="openSection('processo')">
+          <span class="dev-nav__emoji">🧭</span> {{ 'Como funciona' | translate }}
+        </button>
+        <a [href]="whatsapp" target="_blank" rel="noopener" class="dev-nav__btn dev-nav__btn--wpp">
+          <span class="dev-nav__emoji">💬</span> {{ 'Pedir orçamento' | translate }}
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Painel: mostra apenas a seção escolhida -->
+  <section class="section dev-panel-section" *ngIf="activeSection">
+    <div class="container" id="dev-panel">
+
+      <!-- Serviços -->
+      <div class="dev-section dev-fade" *ngIf="activeSection === 'servicos'">
+        <div class="prog-eyebrow"><span>⚙️</span> {{ 'O QUE EU FAÇO' | translate }}</div>
+        <h2 class="prog-title">{{ 'Serviços de desenvolvimento' | translate }}</h2>
+        <div class="services-grid">
+          <div class="service-card" *ngFor="let s of services">
+            <div class="service-card__emoji">{{ s.emoji }}</div>
+            <h3>{{ s.title | translate }}</h3>
+            <p>{{ s.desc | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planos -->
+      <div class="dev-section dev-fade" *ngIf="activeSection === 'planos'">
+        <div class="prog-eyebrow"><span>💰</span> {{ 'PLANOS & PREÇOS' | translate }}</div>
+        <h2 class="prog-title">{{ 'Escolha o que precisa' | translate }}</h2>
+        <p class="plans-note">{{ 'Cada projeto é único. O valor final depende do escopo — me chama no WhatsApp que monto
+          um orçamento sob medida pra você. 🚀' | translate }}</p>
+
+        <div class="plans-grid">
+          <div class="plan-card" *ngFor="let p of plans" [class.plan-card--highlight]="p.highlight">
+            <span *ngIf="p.highlight" class="plan-badge">{{ 'Mais pedido' | translate }}</span>
+            <h3 class="plan-name">{{ p.name | translate }}</h3>
+            <div class="plan-price">{{ p.price | translate }}</div>
+            <span class="plan-hint">{{ p.priceHint | translate }}</span>
+            <span class="plan-prazo">{{ p.prazo | translate }}</span>
+            <ul class="plan-features">
+              <li *ngFor="let f of p.features">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                {{ f | translate }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="plans-info">
+          <p>
+            <strong>📲 Publicação inclusa:</strong>
+            {{ 'Já sou desenvolvedor registrado na Google Play — a publicação do seu app está inclusa, sem custo extra
+            de conta.' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Como funciona -->
+      <div class="dev-section dev-fade" *ngIf="activeSection === 'processo'">
+        <div class="prog-eyebrow"><span>🧭</span> {{ 'COMO FUNCIONA' | translate }}</div>
+        <h2 class="prog-title">{{ 'Do primeiro contato à entrega' | translate }}</h2>
+        <div class="steps-grid">
+          <div class="step-card" *ngFor="let s of steps">
+            <span class="step-num">{{ s.num }}</span>
+            <h3>{{ s.title | translate }}</h3>
+            <p>{{ s.desc | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

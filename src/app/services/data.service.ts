@@ -7,6 +7,7 @@ export class DataService {
   readonly navLinks: NavLink[] = [
     { path: '/', label: 'Sobre & Lives', icon: 'user', badge: { text: 'TikTok', type: 'red' } },
     { path: '/galeria', label: 'Galeria de Arte', icon: 'image' },
+    { path: '/desenvolvedor', label: 'Desenvolvedor', icon: 'layers' },
   ];
 
   readonly lives: LiveVideo[] = [
