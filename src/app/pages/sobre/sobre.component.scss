@@ -290,6 +290,7 @@
       animation: spinOnce 0.6s ease;
     }
   }
+
 }
 
 @keyframes spinOnce {
@@ -366,6 +367,19 @@
       animation: iconSpin 6s linear infinite;
     }
   }
+
+  /* Animações de batalha/MVP — mesmo tamanho do Coins */
+  &--anim {
+    background: linear-gradient(145deg, #8b7bd8, #6c63ff, #5a51e0);
+    box-shadow:
+      0 8px 24px rgba(108, 99, 255, 0.5),
+      0 2px 4px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+    svg {
+      animation: iconBounce 2s ease-in-out infinite;
+    }
+  }
 }
 
 @keyframes iconBounce {
@@ -402,6 +416,10 @@
   color: var(--text-primary);
   text-align: center;
   line-height: 1.2;
+  min-height: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &--coins {
     color: #f5a623;
@@ -409,6 +427,10 @@
 
   &--damiao {
     color: #e91e63;
+  }
+
+  &--anim {
+    color: #6c63ff;
   }
 }
 
@@ -418,6 +440,11 @@
   font-family: var(--font-mono);
   text-align: center;
   margin-top: -4px;
+  min-height: 1.1em;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &--coins {
     color: #f5a623;
@@ -425,6 +452,10 @@
 
   &--damiao {
     color: #e91e63;
+  }
+
+  &--anim {
+    color: #9d94ff;
   }
 }
 
