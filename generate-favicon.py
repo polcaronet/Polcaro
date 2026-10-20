@@ -1,6 +1,10 @@
 """
-Script para gerar favicon.ico redondo a partir de uma imagem.
-Uso: python generate-favicon.py caminho/da/imagem.png
+Script para gerar favicons REDONDOS a partir de uma imagem.
+Gera o favicon.ico e todos os PNGs (16, 32, apple-touch, icon-192, icon-512)
+com máscara circular e fundo transparente.
+
+Uso: python generate-favicon.py caminho/da/imagem.jpg
+Exemplo: python generate-favicon.py src/assets/og-cavalheiro-wide.jpg
 
 Requisitos: pip install Pillow
 """
@@ -15,56 +19,64 @@ except ImportError:
     sys.exit(1)
 
 
-def make_circle(img: Image.Image) -> Image.Image:
-    """Aplica máscara circular na imagem."""
-    size = img.size
-    mask = Image.new("L", size, 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((0, 0, size[0], size[1]), fill=255)
-
-    # Cria imagem com fundo transparente
-    output = Image.new("RGBA", size, (0, 0, 0, 0))
-    img_rgba = img.convert("RGBA")
-    output.paste(img_rgba, mask=mask)
-    return output
-
-
-def generate_favicon(input_path: str, output_path: str = "src/favicon.ico"):
-    """Converte imagem para favicon.ico redondo com múltiplos tamanhos."""
-    img = Image.open(input_path)
-
-    # Recorta para quadrado (pega o centro)
+def crop_square(img: Image.Image) -> Image.Image:
+    """Recorta a imagem para um quadrado centralizado."""
     width, height = img.size
     size = min(width, height)
     left = (width - size) // 2
     top = (height - size) // 2
-    img = img.crop((left, top, left + size, top + size))
+    return img.crop((left, top, left + size, top + size))
 
-    # Aplica máscara circular
+
+def make_circle(img: Image.Image) -> Image.Image:
+    """Aplica máscara circular com antialiasing e fundo transparente."""
+    # Faz a máscara em escala maior (supersampling) para suavizar a borda
+    big = img.size[0] * 4
+    mask = Image.new("L", (big, big), 0)
+    draw = ImageDraw.Draw(mask)
+    draw.ellipse((0, 0, big, big), fill=255)
+    mask = mask.resize(img.size, Image.LANCZOS)
+
+    output = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    output.paste(img.convert("RGBA"), mask=mask)
+    return output
+
+
+def generate(input_path: str):
+    img = Image.open(input_path)
+    img = crop_square(img)
     img = make_circle(img)
 
-    # Gera múltiplos tamanhos para o .ico
-    sizes = [(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)]
-    icons = []
-    for s in sizes:
-        resized = img.resize(s, Image.LANCZOS)
-        icons.append(resized)
-
-    # Salva como .ico
+    # 1) favicon.ico (multi-tamanho)
+    ico_sizes = [(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)]
+    icons = [img.resize(s, Image.LANCZOS) for s in ico_sizes]
     icons[0].save(
-        output_path,
+        "src/favicon.ico",
         format="ICO",
         sizes=[(i.width, i.height) for i in icons],
         append_images=icons[1:],
     )
-    print(f"✅ Favicon redondo gerado: {output_path}")
-    print(f"   Tamanhos: {', '.join(f'{s[0]}x{s[1]}' for s in sizes)}")
+    print("✅ src/favicon.ico")
+
+    # 2) PNGs redondos usados no index.html / manifest
+    png_targets = {
+        "src/assets/favicon-16x16.png": 16,
+        "src/assets/favicon-32x32.png": 32,
+        "src/assets/apple-touch-icon.png": 180,
+        "src/assets/icon-192.png": 192,
+        "src/assets/icon-512.png": 512,
+    }
+    for path, size in png_targets.items():
+        img.resize((size, size), Image.LANCZOS).save(path, format="PNG")
+        print(f"✅ {path} ({size}x{size})")
+
+    print("\n🎉 Todos os favicons redondos foram gerados.")
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Uso: python generate-favicon.py caminho/da/imagem.png")
-        print("Exemplo: python generate-favicon.py src/assets/eu_formula1.png")
+        print("Uso: python generate-favicon.py caminho/da/imagem.jpg")
+        print("Exemplo: python generate-favicon.py src/assets/og-cavalheiro-wide.jpg")
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -72,4 +84,4 @@ if __name__ == "__main__":
         print(f"❌ Arquivo não encontrado: {input_file}")
         sys.exit(1)
 
-    generate_favicon(input_file)
+    generate(input_file)
