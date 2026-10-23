@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { SeoService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -137,6 +140,14 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   bioOpen = false;
+
+  constructor(private router: Router, private seo: SeoService) { }
+
+  ngOnInit(): void {
+    this.router.events
+      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+      .subscribe((e) => this.seo.update(e.urlAfterRedirects));
+  }
 }
