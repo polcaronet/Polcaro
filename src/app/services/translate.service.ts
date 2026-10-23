@@ -54,13 +54,16 @@ export class TranslateService {
   }
 
   private getInitialLang(): Lang {
-    const saved = localStorage.getItem('lang') as Lang;
-    if (saved && this.isValidLang(saved)) return saved;
-
-    // Detecta idioma do navegador
-    const browserLang = navigator.language?.substring(0, 2) as Lang;
-    if (this.isValidLang(browserLang)) return browserLang;
-
+    // Respeita só a escolha manual salva pelo visitante.
+    // Caso contrário, PT é o padrão (público-alvo brasileiro + lang="pt-BR"
+    // para SEO). Não usamos navigator.language para não cair em inglês
+    // com crawlers/navegadores em outro idioma.
+    try {
+      const saved = localStorage.getItem('lang') as Lang;
+      if (saved && this.isValidLang(saved)) return saved;
+    } catch {
+      // localStorage pode não existir em alguns ambientes
+    }
     return 'pt';
   }
 
