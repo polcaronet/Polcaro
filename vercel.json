@@ -37,6 +37,22 @@
       "destination": "/api/live"
     },
     {
+      "source": "/desenvolvedor",
+      "destination": "/desenvolvedor.html"
+    },
+    {
+      "source": "/galeria",
+      "destination": "/galeria.html"
+    },
+    {
+      "source": "/privacidade",
+      "destination": "/privacidade.html"
+    },
+    {
+      "source": "/termos",
+      "destination": "/termos.html"
+    },
+    {
       "source": "/((?!sitemap\\.xml|robots\\.txt|assets|favicon\\.ico|live|api).*)",
       "destination": "/index.html"
     }
