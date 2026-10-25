@@ -158,6 +158,43 @@ const EN_TRANSLATIONS: Record<string, string> = {
   'Termos de Uso': 'Terms of Use',
   'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'Anselmo Polcaro, Brazilian, streamer on TikTok @anselmopolcaro.',
   'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'Lives every night: battles, humor, chat and sometimes singing. Come join the crew! 🎙️😂',
+
+  // Animações
+  'Animações': 'Animations',
+  'Batalhas & MVP ⚔️': 'Battles & MVP ⚔️',
+  'ANIMAÇÕES PARA LIVES': 'LIVE ANIMATIONS',
+  'Animações, MVPs e alertas': 'Animations, MVPs and alerts',
+  'Faço animações para batalhas, MVPs, alertas de live e vídeos personalizados. Confira os tipos de serviço e peça pelo WhatsApp.': 'I make battle animations, MVPs, live alerts and custom videos. Check the services and order on WhatsApp.',
+  'Pedir no WhatsApp': 'Order on WhatsApp',
+  'BATALHAS': 'BATTLES',
+  'Animações e MVPs': 'Animations and MVPs',
+  'Animações feitas pra TikTok Live: batalhas, vitória e o momento MVP com a sua identidade.': 'Animations for TikTok Live: battles, victory and the MVP moment with your identity.',
+  'Animações de batalha': 'Battle animations',
+  'Animações feitas pra TikTok Live: entrada, vitória e impacto visual nas batalhas.': 'Animations for TikTok Live: intro, victory and visual impact in battles.',
+  'MVPs para batalhas': 'Battle MVPs',
+  'MVP personalizado com o seu visual, nome e estilo pra destacar o momento da vitória.': 'Custom MVP with your look, name and style to highlight the victory moment.',
+  'ALERTAS DE LIVE': 'LIVE ALERTS',
+  'X2, X3, Sniper e mais': 'X2, X3, Sniper and more',
+  'Alertas personalizados pra presente, combo e momento da live. Escolha o tipo e peça no WhatsApp.': 'Custom alerts for gifts, combos and live moments. Pick a type and order on WhatsApp.',
+  'Alerta de multiplicador x2 pra live explodir quando o combo começa.': 'x2 multiplier alert to light up the live when the combo starts.',
+  'Alerta de multiplicador x3 com mais impacto nos picos da live.': 'x3 multiplier alert with more impact at live peaks.',
+  'Animação de Sniper pra entrada marcante nas batalhas e lives.': 'Sniper animation for a striking entrance in battles and lives.',
+  'Alerta TEPTEP personalizado, no estilo da live e da sua marca.': 'Custom TEPTEP alert in your live style and brand.',
+  'Alerta Heart me pra quem pede coração e quer aparecer na tela.': 'Heart me alert for viewers who want to show up on screen.',
+  'Alerta Popular pra destacar presentes e apoiadores da live.': 'Popular alert to highlight gifts and supporters.',
+  'VÍDEOS': 'VIDEOS',
+  'Conteúdo em vídeo': 'Video content',
+  'Vídeos engraçados': 'Funny videos',
+  'Vídeos de humor pra live, stories e conteúdo — no seu estilo, com a sua cara.': 'Humor videos for live, stories and content — in your style.',
+  'Vídeos de transformação': 'Transformation videos',
+  'Transformações visuais (antes/depois, personagem, efeito especial) pra live e redes.': 'Visual transformations (before/after, character, special effect) for live and socials.',
+  'Sob encomenda': 'Made to order',
+  'Vídeos de presentes personalizáveis': 'Customizable gift videos',
+  'Vídeos feitos sob medida — presente, homenagem ou transformação exclusiva. Esse tipo de produção leva alguns dias e é mediante pagamento.': 'Made-to-order videos — gift, tribute or exclusive transformation. This production takes a few days and requires payment.',
+  'Personalização com nome, foto e pedido': 'Customization with name, photo and request',
+  'Prazo de alguns dias, conforme a complexidade': 'A few days, depending on complexity',
+  'Valor combinado no WhatsApp, com pagamento antecipado': 'Price agreed on WhatsApp, with payment upfront',
+  'Pedir orçamento no WhatsApp': 'Get a quote on WhatsApp',
 };
 
 const ES_TRANSLATIONS: Record<string, string> = {
@@ -204,6 +241,14 @@ const ES_TRANSLATIONS: Record<string, string> = {
   'Termos de Uso': 'Términos de Uso',
   'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'Anselmo Polcaro, brasileño, streamer en TikTok @anselmopolcaro.',
   'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'Lives todas las noches: batallas, humor, charla y a veces canto. ¡Ven a ser parte del grupo! 🎙️😂',
+  'Animações': 'Animaciones',
+  'Pedir no WhatsApp': 'Pedir por WhatsApp',
+  'Animações, MVPs e alertas': 'Animaciones, MVPs y alertas',
+  'Pedir orçamento no WhatsApp': 'Pedir presupuesto por WhatsApp',
+  'Vídeos engraçados': 'Videos graciosos',
+  'Vídeos de transformação': 'Videos de transformación',
+  'Vídeos de presentes personalizáveis': 'Videos de regalos personalizables',
+  'Sob encomenda': 'Por encargo',
 };
 
 const FR_TRANSLATIONS: Record<string, string> = {
@@ -235,6 +280,10 @@ const FR_TRANSLATIONS: Record<string, string> = {
   'Termos de Uso': 'Conditions d\'Utilisation',
   'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'Anselmo Polcaro, brésilien, streamer sur TikTok @anselmopolcaro.',
   'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'Lives tous les soirs : batailles, humour, discussion et parfois du chant. Venez faire partie du groupe ! 🎙️😂',
+  'Animações': 'Animations',
+  'Pedir no WhatsApp': 'Commander sur WhatsApp',
+  'Animações, MVPs e alertas': 'Animations, MVP et alertes',
+  'Pedir orçamento no WhatsApp': 'Demander un devis sur WhatsApp',
 };
 
 const AR_TRANSLATIONS: Record<string, string> = {
@@ -266,4 +315,6 @@ const AR_TRANSLATIONS: Record<string, string> = {
   'Termos de Uso': 'شروط الاستخدام',
   'Anselmo Polcaro, brasileiro, streamer no TikTok @anselmopolcaro.': 'أنسيلمو بولكارو، برازيلي، ستريمر على TikTok @anselmopolcaro.',
   'Lives todas as noites: batalhas, humor, bate-papo e às vezes um canto. Vem fazer parte da galera! 🎙️😂': 'بث مباشر كل ليلة: معارك، فكاهة، دردشة وأحياناً غناء. انضم إلى المجموعة! 🎙️😂',
+  'Animações': 'رسوم متحركة',
+  'Pedir no WhatsApp': 'اطلب عبر واتساب',
 };

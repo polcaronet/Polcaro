@@ -6,6 +6,7 @@ import { TermosComponent } from './pages/termos/termos.component';
 
 import { GaleriaComponent } from './pages/galeria/galeria.component';
 import { DesenvolvedorComponent } from './pages/desenvolvedor/desenvolvedor.component';
+import { AnimacoesComponent } from './pages/animacoes/animacoes.component';
 
 const routes: Routes = [
   { path: '', component: SobreComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'sobre', redirectTo: '' },
   { path: 'galeria', component: GaleriaComponent },
   { path: 'desenvolvedor', component: DesenvolvedorComponent },
+  { path: 'animacoes', component: AnimacoesComponent },
   { path: 'privacidade', component: PrivacidadeComponent },
   { path: 'termos', component: TermosComponent },
   { path: '**', redirectTo: '' },

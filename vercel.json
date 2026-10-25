@@ -41,6 +41,10 @@
       "destination": "/desenvolvedor.html"
     },
     {
+      "source": "/animacoes",
+      "destination": "/animacoes.html"
+    },
+    {
       "source": "/galeria",
       "destination": "/galeria.html"
     },

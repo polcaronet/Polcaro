@@ -14,6 +14,7 @@ import { SafeUrlPipe } from './services/safe-url.pipe';
 import { TranslatePipe } from './services/translate.pipe';
 import { GaleriaComponent } from './pages/galeria/galeria.component';
 import { DesenvolvedorComponent } from './pages/desenvolvedor/desenvolvedor.component';
+import { AnimacoesComponent } from './pages/animacoes/animacoes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { DesenvolvedorComponent } from './pages/desenvolvedor/desenvolvedor.comp
     LivesComponent,
     SobreComponent,
     PrivacidadeComponent, TermosComponent, GaleriaComponent,
-    DesenvolvedorComponent,
+    DesenvolvedorComponent, AnimacoesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   bootstrap: [AppComponent],

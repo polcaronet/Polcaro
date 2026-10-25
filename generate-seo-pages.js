@@ -22,6 +22,11 @@ const PAGES = {
     description:
       'Desenvolvimento de aplicativos Android em Flutter com Dart: e-commerce, PIX, Firebase e integração com IA. Publicação na Google Play inclusa.',
   },
+  animacoes: {
+    title: 'Animações, MVPs e Alertas de Live | Anselmo Polcaro',
+    description:
+      'Animações para batalhas, MVPs, alertas de live (X2, X3, Sniper, TEPTEP, Heart me, Popular), vídeos engraçados, transformação e presentes personalizados.',
+  },
   privacidade: {
     title: 'Política de Privacidade | Anselmo Polcaro',
     description: 'Política de privacidade do site polcaronet.com.br.',
