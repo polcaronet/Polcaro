@@ -12,7 +12,6 @@ import { NavLink } from '../../models/portfolio.models';
 })
 export class NavbarComponent implements OnInit {
   navLinks: NavLink[] = [];
-  readonly vakinhaUrl = 'https://www.vakinha.com.br/6341978';
   scrolled = false;
   mobileOpen = false;
   currentTheme = 'light';

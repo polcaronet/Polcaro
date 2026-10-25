@@ -39,13 +39,6 @@
         {{ 'Pix' | translate }}
       </a>
 
-      <!-- Vakinha -->
-      <a [href]="vakinhaUrl" target="_blank" rel="noopener noreferrer" class="navbar__vakinha"
-        title="Ajude minha vaquinha">
-        <span class="nav-icon" [innerHTML]="getIcon('heart')"></span>
-        {{ 'Vakinha' | translate }}
-      </a>
-
       <!-- Language selector -->
       <div class="lang-selector" (click)="toggleLang()">
         <img class="lang-selector__flag" [src]="getCurrentFlag()" alt="Language" />
@@ -108,12 +101,6 @@
       <a routerLink="/" fragment="pix" class="mobile-link mobile-link--pix">
         <span class="nav-icon" [innerHTML]="getIcon('pix')"></span>
         {{ 'Pix' | translate }}
-      </a>
-    </li>
-    <li>
-      <a [href]="vakinhaUrl" target="_blank" rel="noopener noreferrer" class="mobile-link mobile-link--vakinha">
-        <span class="nav-icon" [innerHTML]="getIcon('heart')"></span>
-        {{ 'Vakinha' | translate }}
       </a>
     </li>
   </ul>
